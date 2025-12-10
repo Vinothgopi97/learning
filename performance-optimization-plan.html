@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performance Optimization - Learning Plan</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #f093fb;
+        }
+
+        h1 {
+            color: #f5576c;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.2em;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            color: #f093fb;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-left: 15px;
+            border-left: 5px solid #f5576c;
+        }
+
+        .topic-card {
+            background: linear-gradient(135deg, #fff5f7 0%, #ffe5e9 100%);
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-left: 5px solid #f093fb;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .topic-card h3 {
+            color: #f5576c;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+        }
+
+        .topic-card h4 {
+            color: #f093fb;
+            font-size: 1.1em;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+
+        .topic-card ul {
+            margin-left: 20px;
+            color: #555;
+        }
+
+        .topic-card li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .comparison-table th {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .comparison-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #f0f0f0;
+            color: #555;
+        }
+
+        .comparison-table tr:hover {
+            background: #fff5f7;
+        }
+
+        .code-block {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 15px 0;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            line-height: 1.5;
+        }
+
+        .highlight {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .best-practice {
+            background: #e8f5e9;
+            border-left: 5px solid #4caf50;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+
+        .best-practice strong {
+            color: #2e7d32;
+        }
+
+        .references {
+            background: linear-gradient(135deg, #fff5f7 0%, #ffe5e9 100%);
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 40px;
+        }
+
+        .references h2 {
+            color: #f5576c;
+            margin-bottom: 20px;
+        }
+
+        .references ul {
+            list-style: none;
+        }
+
+        .references li {
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .references li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #f093fb;
+            font-weight: bold;
+        }
+
+        .references a {
+            color: #f5576c;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .references a:hover {
+            color: #f093fb;
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #f093fb;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>⚡ Performance Optimization</h1>
+            <p class="subtitle">Comprehensive Guide to Application Performance, Data Formats & Caching</p>
+        </header>
+
+        <!-- Application Performance Improvement -->
+        <div class="section">
+            <h2>🚀 Application Performance Improvement</h2>
+            
+            <div class="topic-card">
+                <h3>1. Code-Level Optimizations</h3>
+                <ul>
+                    <li><strong>Algorithm Efficiency:</strong> Choose optimal algorithms (O(log n) over O(n²))</li>
+                    <li><strong>Lazy Loading:</strong> Load resources only when needed</li>
+                    <li><strong>Avoid N+1 Queries:</strong> Use batch queries, JOIN operations, or eager loading</li>
+                    <li><strong>Async Processing:</strong> Use asynchronous operations for I/O-bound tasks</li>
+                    <li><strong>Connection Pooling:</strong> Reuse database connections instead of creating new ones</li>
+                    <li><strong>Memory Management:</strong> Avoid memory leaks, use proper garbage collection</li>
+                </ul>
+
+                <div class="code-block">// Example: Batch Loading vs N+1 Query
+// Bad - N+1 Query
+users.forEach(user -> {
+    List&lt;Order&gt; orders = orderService.findByUserId(user.getId()); // N queries
+});
+
+// Good - Batch Loading
+List&lt;Long&gt; userIds = users.stream().map(User::getId).collect(Collectors.toList());
+Map&lt;Long, List&lt;Order&gt;&gt; ordersByUser = orderService.findByUserIds(userIds); // 1 query</div>
+            </div>
+
+            <div class="topic-card">
+                <h3>2. Database Optimization</h3>
+                <ul>
+                    <li><strong>Indexing:</strong> Create indexes on frequently queried columns</li>
+                    <li><strong>Query Optimization:</strong> Analyze and optimize slow queries using EXPLAIN</li>
+                    <li><strong>Database Partitioning:</strong> Horizontal/vertical partitioning for large tables</li>
+                    <li><strong>Read Replicas:</strong> Distribute read operations across replicas</li>
+                    <li><strong>Denormalization:</strong> Strategic denormalization for read-heavy workloads</li>
+                    <li><strong>Pagination:</strong> Implement cursor-based or offset pagination</li>
+                </ul>
+            </div>
+
+            <div class="topic-card">
+                <h3>3. Frontend Performance</h3>
+                <ul>
+                    <li><strong>Code Splitting:</strong> Break JavaScript bundles into smaller chunks</li>
+                    <li><strong>Minification & Compression:</strong> Minify CSS/JS, enable Gzip/Brotli</li>
+                    <li><strong>CDN Usage:</strong> Serve static assets from Content Delivery Networks</li>
+                    <li><strong>Image Optimization:</strong> Use WebP format, lazy loading, responsive images</li>
+                    <li><strong>Browser Caching:</strong> Set appropriate cache headers</li>
+                    <li><strong>Critical CSS:</strong> Inline critical CSS, defer non-critical stylesheets</li>
+                </ul>
+            </div>
+
+            <div class="topic-card">
+                <h3>4. Backend Performance</h3>
+                <ul>
+                    <li><strong>Load Balancing:</strong> Distribute traffic across multiple servers</li>
+                    <li><strong>Microservices:</strong> Break monoliths into scalable services</li>
+                    <li><strong>Message Queues:</strong> Use Kafka, RabbitMQ for async processing</li>
+                    <li><strong>Rate Limiting:</strong> Protect APIs from abuse and overload</li>
+                    <li><strong>Response Compression:</strong> Compress HTTP responses</li>
+                    <li><strong>HTTP/2 or HTTP/3:</strong> Use modern protocols for multiplexing</li>
+                </ul>
+            </div>
+
+            <div class="best-practice">
+                <strong>💡 Best Practice:</strong> Always measure performance before and after optimization using APM tools (New Relic, DataDog, AppDynamics) and establish performance budgets.
+            </div>
+        </div>
+
+        <!-- JSON vs Other Formats -->
+        <div class="section">
+            <h2>📊 Data Formats Comparison</h2>
+            
+            <div class="topic-card">
+                <h3>JSON vs XML vs Protocol Buffers vs MessagePack</h3>
+                
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Format</th>
+                            <th>Pros</th>
+                            <th>Cons</th>
+                            <th>Best Use Case</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>JSON</strong></td>
+                            <td>Human-readable, lightweight, native JavaScript support, wide adoption</td>
+                            <td>No schema validation, larger than binary formats, no comments</td>
+                            <td>REST APIs, web applications, configuration files</td>
+                        </tr>
+                        <tr>
+                            <td><strong>XML</strong></td>
+                            <td>Schema validation (XSD), namespace support, extensible</td>
+                            <td>Verbose, slower parsing, larger file size</td>
+                            <td>Enterprise systems, SOAP APIs, document markup</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Protocol Buffers</strong></td>
+                            <td>Very compact, fast serialization, schema evolution, type safety</td>
+                            <td>Not human-readable, requires schema definition</td>
+                            <td>Microservices, gRPC, high-performance systems</td>
+                        </tr>
+                        <tr>
+                            <td><strong>MessagePack</strong></td>
+                            <td>Binary format, smaller than JSON, fast, backward compatible with JSON</td>
+                            <td>Not human-readable, less tooling support</td>
+                            <td>Real-time communication, caching, IoT</td>
+                        </tr>
+                        <tr>
+                            <td><strong>YAML</strong></td>
+                            <td>Very human-readable, supports comments, compact syntax</td>
+                            <td>Slower parsing, indentation-sensitive, security concerns</td>
+                            <td>Configuration files, CI/CD pipelines, Kubernetes</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Avro</strong></td>
+                            <td>Compact binary, schema evolution, supports compression</td>
+                            <td>Requires schema, complex setup</td>
+                            <td>Big data, Kafka messages, Hadoop ecosystem</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h4>Performance Comparison (1MB Dataset)</h4>
+                <div class="code-block">Serialization Speed:
+Protocol Buffers: ~2ms   ⚡ Fastest
+MessagePack:      ~5ms   ⚡ Very Fast
+JSON:            ~15ms   ✓ Fast
+XML:             ~45ms   ⚠ Slower
+YAML:            ~60ms   ⚠ Slowest
+
+File Size:
+Protocol Buffers: 250KB  ⚡ Smallest
+Avro:            280KB  ⚡ Very Small
+MessagePack:     320KB  ✓ Small
+JSON:            550KB  ○ Medium
+XML:             850KB  ⚠ Large
+YAML:            600KB  ○ Medium</div>
+
+                <div class="best-practice">
+                    <strong>💡 Recommendation:</strong> Use JSON for REST APIs and web apps. Use Protocol Buffers or Avro for high-performance microservices and data streaming.
+                </div>
+            </div>
+        </div>
+
+        <!-- Caching Mechanisms -->
+        <div class="section">
+            <h2>🗄️ Cache Mechanisms</h2>
+            
+            <div class="topic-card">
+                <h3>1. Cache Types & Strategies</h3>
+                
+                <h4>Client-Side Caching</h4>
+                <ul>
+                    <li><strong>Browser Cache:</strong> HTTP headers (Cache-Control, ETag, Expires)</li>
+                    <li><strong>LocalStorage/SessionStorage:</strong> Store data in browser</li>
+                    <li><strong>Service Workers:</strong> Offline-first PWA caching</li>
+                    <li><strong>Memory Cache:</strong> In-memory caching in JavaScript</li>
+                </ul>
+
+                <h4>Server-Side Caching</h4>
+                <ul>
+                    <li><strong>Application Cache:</strong> In-memory caching (Caffeine, Guava Cache)</li>
+                    <li><strong>Distributed Cache:</strong> Redis, Memcached</li>
+                    <li><strong>Database Query Cache:</strong> MySQL query cache, PostgreSQL result cache</li>
+                    <li><strong>CDN Caching:</strong> CloudFront, Cloudflare, Akamai</li>
+                    <li><strong>HTTP Reverse Proxy:</strong> Nginx, Varnish</li>
+                </ul>
+            </div>
+
+            <div class="topic-card">
+                <h3>2. Cache Invalidation Strategies</h3>
+                
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Strategy</th>
+                            <th>Description</th>
+                            <th>Use Case</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Time-Based (TTL)</strong></td>
+                            <td>Cache expires after a fixed time period</td>
+                            <td>Weather data, news feeds, stock prices</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Event-Based</strong></td>
+                            <td>Cache invalidated when data is updated</td>
+                            <td>User profiles, product catalogs</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Write-Through</strong></td>
+                            <td>Update cache and database simultaneously</td>
+                            <td>Critical data requiring consistency</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Write-Behind</strong></td>
+                            <td>Update cache first, database asynchronously</td>
+                            <td>High-write workloads, analytics</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Cache-Aside</strong></td>
+                            <td>Application manages cache explicitly</td>
+                            <td>General purpose caching</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Refresh-Ahead</strong></td>
+                            <td>Proactively refresh before expiration</td>
+                            <td>Predictable access patterns</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="code-block">// Cache-Aside Pattern Example (Spring Boot + Redis)
+@Service
+public class UserService {
+    @Autowired
+    private UserRepository userRepository;
+    
+    @Autowired
+    private RedisTemplate&lt;String, User&gt; redisTemplate;
+    
+    public User getUser(Long id) {
+        String key = "user:" + id;
+        
+        // 1. Check cache first
+        User user = redisTemplate.opsForValue().get(key);
+        
+        if (user != null) {
+            return user; // Cache hit
+        }
+        
+        // 2. Cache miss - fetch from database
+        user = userRepository.findById(id).orElse(null);
+        
+        if (user != null) {
+            // 3. Store in cache with TTL
+            redisTemplate.opsForValue().set(key, user, 1, TimeUnit.HOURS);
+        }
+        
+        return user;
+    }
+    
+    public void updateUser(User user) {
+        // Update database
+        userRepository.save(user);
+        
+        // Invalidate cache
+        redisTemplate.delete("user:" + user.getId());
+    }
+}</div>
+            </div>
+
+            <div class="topic-card">
+                <h3>3. Cache Eviction Policies</h3>
+                <ul>
+                    <li><strong>LRU (Least Recently Used):</strong> Remove least recently accessed items</li>
+                    <li><strong>LFU (Least Frequently Used):</strong> Remove least frequently accessed items</li>
+                    <li><strong>FIFO (First In First Out):</strong> Remove oldest items first</li>
+                    <li><strong>Random Replacement:</strong> Remove random items</li>
+                    <li><strong>TTL-Based:</strong> Remove expired items based on time-to-live</li>
+                </ul>
+
+                <div class="code-block">// Redis Cache Configuration
+spring.redis.host=localhost
+spring.redis.port=6379
+spring.redis.timeout=2000ms
+spring.cache.type=redis
+spring.cache.redis.time-to-live=3600000  # 1 hour
+spring.cache.redis.cache-null-values=false
+
+# Eviction Policy
+maxmemory-policy allkeys-lru  # Use LRU eviction</div>
+            </div>
+
+            <div class="topic-card">
+                <h3>4. Distributed Caching Best Practices</h3>
+                <ul>
+                    <li><strong>Cache Stampede Prevention:</strong> Use locks or probabilistic early expiration</li>
+                    <li><strong>Hot Key Problem:</strong> Distribute hot keys across multiple cache nodes</li>
+                    <li><strong>Cache Warming:</strong> Pre-populate cache on application startup</li>
+                    <li><strong>Multi-Level Caching:</strong> L1 (local) + L2 (distributed) cache</li>
+                    <li><strong>Monitoring:</strong> Track cache hit ratio, latency, memory usage</li>
+                    <li><strong>Serialization:</strong> Use efficient serialization (Protobuf, MessagePack)</li>
+                </ul>
+
+                <div class="best-practice">
+                    <strong>💡 Cache Hit Ratio Target:</strong> Aim for >80% cache hit ratio. Below 70% indicates poor cache strategy or insufficient cache size.
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional Topics -->
+        <div class="section">
+            <h2>🔧 Additional Performance Topics</h2>
+            
+            <div class="topic-card">
+                <h3>Connection Pooling</h3>
+                <ul>
+                    <li><strong>Database Connection Pools:</strong> HikariCP, Apache DBCP, C3P0</li>
+                    <li><strong>HTTP Connection Pools:</strong> Apache HttpClient, OkHttp</li>
+                    <li><strong>Optimal Pool Size:</strong> connections = ((core_count * 2) + effective_spindle_count)</li>
+                    <li><strong>Monitoring:</strong> Track active connections, idle connections, wait time</li>
+                </ul>
+
+                <div class="code-block">// HikariCP Configuration (Optimal Settings)
+spring.datasource.hikari.maximum-pool-size=10
+spring.datasource.hikari.minimum-idle=5
+spring.datasource.hikari.connection-timeout=20000
+spring.datasource.hikari.idle-timeout=300000
+spring.datasource.hikari.max-lifetime=1200000
+spring.datasource.hikari.leak-detection-threshold=60000</div>
+            </div>
+
+            <div class="topic-card">
+                <h3>Content Delivery Network (CDN)</h3>
+                <ul>
+                    <li><strong>Edge Caching:</strong> Cache content at edge locations close to users</li>
+                    <li><strong>Static Asset Delivery:</strong> Images, CSS, JS, fonts</li>
+                    <li><strong>Dynamic Content Acceleration:</strong> Route optimization, TCP optimization</li>
+                    <li><strong>DDoS Protection:</strong> Built-in security features</li>
+                    <li><strong>Popular CDNs:</strong> CloudFront, Cloudflare, Fastly, Akamai</li>
+                </ul>
+            </div>
+
+            <div class="topic-card">
+                <h3>Compression Techniques</h3>
+                <ul>
+                    <li><strong>Gzip:</strong> Good compression ratio, widely supported (70% reduction)</li>
+                    <li><strong>Brotli:</strong> Better than Gzip, modern browsers (75-80% reduction)</li>
+                    <li><strong>Response Compression:</strong> Compress API responses over 1KB</li>
+                    <li><strong>Image Compression:</strong> WebP, AVIF, responsive images</li>
+                    <li><strong>Minification:</strong> Remove whitespace, comments from CSS/JS</li>
+                </ul>
+            </div>
+
+            <div class="topic-card">
+                <h3>Monitoring & Profiling</h3>
+                <ul>
+                    <li><strong>APM Tools:</strong> New Relic, DataDog, AppDynamics, Dynatrace</li>
+                    <li><strong>Metrics:</strong> Response time, throughput, error rate, saturation</li>
+                    <li><strong>Profiling:</strong> CPU profiling, memory profiling, thread dumps</li>
+                    <li><strong>Logging:</strong> Structured logging, log levels, centralized logging (ELK)</li>
+                    <li><strong>Alerts:</strong> Set up alerts for performance degradation</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- References -->
+        <div class="references">
+            <h2>📚 References & Resources</h2>
+            <ul>
+                <li><a href="https://web.dev/performance/" target="_blank">Web.dev - Web Performance</a> - Google's comprehensive performance guide</li>
+                <li><a href="https://redis.io/docs/manual/patterns/" target="_blank">Redis Documentation - Caching Patterns</a> - Official Redis caching strategies</li>
+                <li><a href="https://developers.google.com/protocol-buffers" target="_blank">Protocol Buffers Guide</a> - Google's data interchange format</li>
+                <li><a href="https://github.com/brettwooldridge/HikariCP/wiki" target="_blank">HikariCP Wiki</a> - High-performance JDBC connection pool</li>
+                <li><a href="https://martinfowler.com/articles/patterns-of-distributed-systems/" target="_blank">Patterns of Distributed Systems</a> - Martin Fowler's distributed patterns</li>
+                <li><a href="https://www.nginx.com/blog/nginx-caching-guide/" target="_blank">NGINX Caching Guide</a> - Reverse proxy caching strategies</li>
+                <li><a href="https://aws.amazon.com/caching/best-practices/" target="_blank">AWS Caching Best Practices</a> - Cloud caching strategies</li>
+                <li><a href="https://www.json.org/json-en.html" target="_blank">JSON Official Website</a> - JSON specification and tools</li>
+                <li><a href="https://msgpack.org/" target="_blank">MessagePack</a> - Efficient binary serialization format</li>
+                <li><a href="https://developer.chrome.com/docs/lighthouse/" target="_blank">Lighthouse</a> - Automated performance testing tool</li>
+            </ul>
+        </div>
+
+        <footer>
+            <p>⚡ Master performance optimization for building scalable, high-performance applications</p>
+            <p style="margin-top: 10px;">Last updated: December 2025</p>
+        </footer>
+    </div>
+</body>
+</html>
