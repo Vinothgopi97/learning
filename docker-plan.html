@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docker Interview Preparation Plan</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #2496ed 0%, #0db7ed 100%);
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2496ed;
+            text-align: center;
+            border-bottom: 3px solid #2496ed;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #0db7ed;
+            color: #2496ed;
+            margin-top: 30px;
+            border-left: 4px solid #2496ed;
+            padding-left: 10px;
+        }
+        h3 {
+            color: #555;
+            margin-top: 20px;
+        }
+        ul {
+            margin: 10px 0;
+        }
+        li {
+            margin: 8px 0;
+            line-height: 1.8;
+        }
+        .week {
+            background: #f8f9fa;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+            border-left: 4px solid #2496ed;
+        }
+        .important {
+            background: #e3f5ff;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 15px 0;
+            border-left: 4px solid #2496ed;
+        }
+        .command-example {
+            background: #f5f5f5;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+            font-family: 'Courier New', monospace;
+            border-left: 3px solid #2496ed;
+        }
+        .best-practice {
+            background: #e8f5e9;
+            padding: 8px;
+            border-radius: 4px;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🐳 Docker Interview Preparation Plan</h1>
+        
+        <div class="important">
+            <strong>📌 Goal:</strong> Master Docker containerization and orchestration concepts<br>
+            <strong>⏱️ Duration:</strong> 4-6 weeks<br>
+            <strong>📊 Daily Time:</strong> 1.5-2 hours
+        </div>
+
+        <h2>📦 Phase 1: Containerization Basics (Week 1)</h2>
+        
+        <div class="week">
+            <h3>Docker Fundamentals</h3>
+            <ul>
+                <li><strong>Container Concepts:</strong>
+                    <ul>
+                        <li>What are containers? Benefits over VMs</li>
+                        <li>Containers vs Virtual Machines comparison</li>
+                        <li>Use cases for containerization</li>
+                        <li>Docker architecture (Client, Daemon, Registry)</li>
+                        <li>Docker Engine components</li>
+                    </ul>
+                </li>
+                <li><strong>Installation & Setup:</strong>
+                    <ul>
+                        <li>Docker Desktop installation (Windows, Mac, Linux)</li>
+                        <li>Docker CLI basics</li>
+                        <li>docker --version, docker info</li>
+                        <li>Docker Hub account and registry</li>
+                    </ul>
+                </li>
+                <li><strong>Core Concepts:</strong>
+                    <ul>
+                        <li>Images vs Containers</li>
+                        <li>Dockerfile basics</li>
+                        <li>Docker Registry and Docker Hub</li>
+                        <li>Container lifecycle</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="command-example">
+                <strong>Practice:</strong> docker run hello-world, docker ps, docker images
+            </div>
+        </div>
+
+        <h2>🖼️ Phase 2: Docker Images (Week 2)</h2>
+        
+        <div class="week">
+            <h3>Working with Images</h3>
+            <ul>
+                <li><strong>Image Commands:</strong>
+                    <ul>
+                        <li>docker pull - download images</li>
+                        <li>docker images / docker image ls - list images</li>
+                        <li>docker rmi - remove images</li>
+                        <li>docker image prune - cleanup unused images</li>
+                        <li>docker tag - tag images</li>
+                        <li>docker push - upload to registry</li>
+                        <li>docker history - view image layers</li>
+                        <li>docker inspect - detailed image info</li>
+                    </ul>
+                </li>
+                <li><strong>Dockerfile:</strong>
+                    <ul>
+                        <li>FROM - base image</li>
+                        <li>RUN - execute commands during build</li>
+                        <li>COPY vs ADD</li>
+                        <li>WORKDIR - set working directory</li>
+                        <li>ENV - environment variables</li>
+                        <li>EXPOSE - document ports</li>
+                        <li>CMD vs ENTRYPOINT</li>
+                        <li>ARG - build-time variables</li>
+                        <li>LABEL - metadata</li>
+                        <li>USER - set user context</li>
+                    </ul>
+                </li>
+                <li><strong>Building Images:</strong>
+                    <ul>
+                        <li>docker build command</li>
+                        <li>Build context</li>
+                        <li>.dockerignore file</li>
+                        <li>Multi-stage builds</li>
+                        <li>Image layers and caching</li>
+                        <li>BuildKit features</li>
+                    </ul>
+                </li>
+                <li><strong>Image Optimization:</strong>
+                    <ul>
+                        <li>Minimizing layer count</li>
+                        <li>Using smaller base images (alpine)</li>
+                        <li>Order of instructions for cache efficiency</li>
+                        <li>Removing unnecessary files</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="command-example">
+                <strong>Practice:</strong> Create Dockerfile, build custom images for different applications
+            </div>
+        </div>
+
+        <h2>🔄 Phase 3: Container Management (Week 3)</h2>
+        
+        <div class="week">
+            <h3>Running & Managing Containers</h3>
+            <ul>
+                <li><strong>Container Lifecycle:</strong>
+                    <ul>
+                        <li>docker run - create and start container</li>
+                        <li>docker start / docker stop</li>
+                        <li>docker restart</li>
+                        <li>docker pause / docker unpause</li>
+                        <li>docker rm - remove containers</li>
+                        <li>docker kill - force stop</li>
+                        <li>--rm flag for auto-cleanup</li>
+                    </ul>
+                </li>
+                <li><strong>Container Commands:</strong>
+                    <ul>
+                        <li>docker ps - list running containers</li>
+                        <li>docker ps -a - all containers</li>
+                        <li>docker logs - view container logs</li>
+                        <li>docker exec - execute commands in running container</li>
+                        <li>docker attach - attach to container</li>
+                        <li>docker cp - copy files to/from container</li>
+                        <li>docker stats - resource usage</li>
+                        <li>docker top - running processes</li>
+                    </ul>
+                </li>
+                <li><strong>Running Options:</strong>
+                    <ul>
+                        <li>-d (detached mode)</li>
+                        <li>-it (interactive terminal)</li>
+                        <li>--name (container naming)</li>
+                        <li>-p (port mapping)</li>
+                        <li>-v (volume mounting)</li>
+                        <li>-e (environment variables)</li>
+                        <li>--network (network assignment)</li>
+                        <li>--restart (restart policy)</li>
+                        <li>--memory, --cpus (resource limits)</li>
+                    </ul>
+                </li>
+                <li><strong>Debugging & Troubleshooting:</strong>
+                    <ul>
+                        <li>docker logs -f (follow logs)</li>
+                        <li>docker exec -it container bash</li>
+                        <li>docker inspect (detailed info)</li>
+                        <li>Common container issues and fixes</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="command-example">
+                <strong>Practice:</strong> Run nginx, postgres containers with various options
+            </div>
+        </div>
+
+        <h2>🔗 Phase 4: Networking & Storage (Week 4)</h2>
+        
+        <div class="week">
+            <h3>Docker Networking</h3>
+            <ul>
+                <li><strong>Network Types:</strong>
+                    <ul>
+                        <li>Bridge network (default)</li>
+                        <li>Host network</li>
+                        <li>None network</li>
+                        <li>Overlay network (Swarm)</li>
+                        <li>Macvlan network</li>
+                    </ul>
+                </li>
+                <li><strong>Network Commands:</strong>
+                    <ul>
+                        <li>docker network ls - list networks</li>
+                        <li>docker network create - create network</li>
+                        <li>docker network connect / disconnect</li>
+                        <li>docker network inspect</li>
+                        <li>docker network rm - remove network</li>
+                    </ul>
+                </li>
+                <li><strong>Port Mapping:</strong>
+                    <ul>
+                        <li>-p host:container port mapping</li>
+                        <li>-P (publish all exposed ports)</li>
+                        <li>Container-to-container communication</li>
+                        <li>DNS resolution between containers</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>Docker Volumes & Storage</h3>
+            <ul>
+                <li><strong>Storage Types:</strong>
+                    <ul>
+                        <li>Volumes (managed by Docker)</li>
+                        <li>Bind mounts (host filesystem)</li>
+                        <li>tmpfs mounts (memory)</li>
+                    </ul>
+                </li>
+                <li><strong>Volume Commands:</strong>
+                    <ul>
+                        <li>docker volume create</li>
+                        <li>docker volume ls</li>
+                        <li>docker volume inspect</li>
+                        <li>docker volume rm</li>
+                        <li>docker volume prune</li>
+                    </ul>
+                </li>
+                <li><strong>Using Volumes:</strong>
+                    <ul>
+                        <li>-v volume_name:/path/in/container</li>
+                        <li>--mount syntax (newer, more explicit)</li>
+                        <li>Volume drivers</li>
+                        <li>Backup and restore volumes</li>
+                        <li>Sharing volumes between containers</li>
+                    </ul>
+                </li>
+                <li><strong>Best Practices:</strong>
+                    <ul>
+                        <li>When to use volumes vs bind mounts</li>
+                        <li>Data persistence strategies</li>
+                        <li>Volume performance considerations</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="command-example">
+                <strong>Practice:</strong> Create custom networks, persist database data with volumes
+            </div>
+        </div>
+
+        <h2>🎼 Phase 5: Docker Compose (Week 5)</h2>
+        
+        <div class="week">
+            <h3>Multi-Container Applications</h3>
+            <ul>
+                <li><strong>Docker Compose Basics:</strong>
+                    <ul>
+                        <li>What is Docker Compose and why use it?</li>
+                        <li>docker-compose.yml file structure</li>
+                        <li>YAML syntax basics</li>
+                        <li>Version compatibility</li>
+                    </ul>
+                </li>
+                <li><strong>Compose File Syntax:</strong>
+                    <ul>
+                        <li>services - defining containers</li>
+                        <li>image vs build</li>
+                        <li>ports - port mapping</li>
+                        <li>volumes - volume mounting</li>
+                        <li>environment - env variables</li>
+                        <li>networks - custom networks</li>
+                        <li>depends_on - service dependencies</li>
+                        <li>restart policies</li>
+                        <li>healthcheck</li>
+                        <li>command and entrypoint overrides</li>
+                    </ul>
+                </li>
+                <li><strong>Compose Commands:</strong>
+                    <ul>
+                        <li>docker-compose up - start services</li>
+                        <li>docker-compose down - stop and remove</li>
+                        <li>docker-compose ps - list services</li>
+                        <li>docker-compose logs - view logs</li>
+                        <li>docker-compose exec - run commands</li>
+                        <li>docker-compose build - build images</li>
+                        <li>docker-compose pull - pull images</li>
+                        <li>docker-compose restart - restart services</li>
+                        <li>docker-compose scale - scale services</li>
+                    </ul>
+                </li>
+                <li><strong>Advanced Features:</strong>
+                    <ul>
+                        <li>Environment variable files (.env)</li>
+                        <li>Extends and overrides</li>
+                        <li>Multiple compose files</li>
+                        <li>Profiles</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="command-example">
+                <strong>Practice:</strong> Create full-stack app (frontend, backend, database) with Compose
+            </div>
+        </div>
+
+        <h2>🚀 Phase 6: Advanced Topics & Production (Week 6)</h2>
+        
+        <div class="week">
+            <h3>Production & Security</h3>
+            <ul>
+                <li><strong>Security Best Practices:</strong>
+                    <ul>
+                        <li>Use official base images</li>
+                        <li>Run containers as non-root user</li>
+                        <li>Scan images for vulnerabilities</li>
+                        <li>Keep images updated</li>
+                        <li>Secrets management (Docker secrets)</li>
+                        <li>Resource limits (memory, CPU)</li>
+                        <li>Read-only filesystems</li>
+                        <li>Docker Content Trust</li>
+                    </ul>
+                </li>
+                <li><strong>Registry & Distribution:</strong>
+                    <ul>
+                        <li>Docker Hub usage</li>
+                        <li>Private registries</li>
+                        <li>Amazon ECR, Google GCR, Azure ACR</li>
+                        <li>Harbor registry</li>
+                        <li>Image versioning strategies</li>
+                    </ul>
+                </li>
+                <li><strong>Docker Swarm (Basics):</strong>
+                    <ul>
+                        <li>Swarm mode concepts</li>
+                        <li>Manager vs worker nodes</li>
+                        <li>Service creation and scaling</li>
+                        <li>Stack deployment</li>
+                        <li>Rolling updates</li>
+                    </ul>
+                </li>
+                <li><strong>CI/CD Integration:</strong>
+                    <ul>
+                        <li>Building images in CI pipelines</li>
+                        <li>Automated testing with containers</li>
+                        <li>Deployment strategies</li>
+                        <li>Container orchestration overview (Kubernetes)</li>
+                    </ul>
+                </li>
+                <li><strong>Monitoring & Logging:</strong>
+                    <ul>
+                        <li>Container logs management</li>
+                        <li>Resource monitoring</li>
+                        <li>Health checks</li>
+                        <li>Log drivers</li>
+                        <li>Prometheus + Grafana basics</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <h2>🎤 Common Interview Questions</h2>
+        
+        <div class="important">
+            <h3>Fundamental Concepts</h3>
+            <ul>
+                <li>What is Docker and how does it differ from VMs?</li>
+                <li>Explain Docker architecture (client, daemon, registry)</li>
+                <li>What is the difference between an image and a container?</li>
+                <li>Difference between CMD and ENTRYPOINT?</li>
+                <li>What is a Dockerfile?</li>
+                <li>Explain Docker layers and caching</li>
+                <li>What is Docker Compose and when to use it?</li>
+                <li>COPY vs ADD in Dockerfile?</li>
+            </ul>
+        </div>
+
+        <div class="important">
+            <h3>Practical Questions</h3>
+            <ul>
+                <li>How do you optimize Docker image size?</li>
+                <li>What are multi-stage builds and why use them?</li>
+                <li>How do containers communicate with each other?</li>
+                <li>Explain Docker networking types (bridge, host, overlay)</li>
+                <li>How do you persist data in Docker?</li>
+                <li>Difference between volumes and bind mounts?</li>
+                <li>How to debug a failing container?</li>
+                <li>How to limit resources for a container?</li>
+            </ul>
+        </div>
+
+        <div class="important">
+            <h3>Advanced & Scenario-Based</h3>
+            <ul>
+                <li>How would you secure Docker containers in production?</li>
+                <li>Explain the process of deploying a microservices app with Docker</li>
+                <li>How do you handle secrets in Docker?</li>
+                <li>What is your strategy for Docker image versioning?</li>
+                <li>How to implement zero-downtime deployments?</li>
+                <li>Difference between Docker Swarm and Kubernetes?</li>
+                <li>How do you monitor container health and performance?</li>
+                <li>Troubleshooting common Docker issues (networking, storage, etc.)</li>
+                <li>CI/CD pipeline integration with Docker</li>
+            </ul>
+        </div>
+
+        <h2>📖 Recommended Resources</h2>
+        <ul>
+            <li><strong>Official Documentation:</strong>
+                <ul>
+                    <li>Docker Official Documentation (docs.docker.com)</li>
+                    <li>Docker Get Started Guide</li>
+                    <li>Docker Hub</li>
+                </ul>
+            </li>
+            <li><strong>Books:</strong>
+                <ul>
+                    <li>"Docker Deep Dive" by Nigel Poulton</li>
+                    <li>"Docker in Practice" by Ian Miell</li>
+                    <li>"Docker: Up & Running" by Karl Matthias</li>
+                </ul>
+            </li>
+            <li><strong>Online Courses:</strong>
+                <ul>
+                    <li>Docker Mastery by Bret Fisher (Udemy)</li>
+                    <li>Kodekloud Docker courses</li>
+                    <li>Play with Docker (labs.play-with-docker.com)</li>
+                </ul>
+            </li>
+            <li><strong>Practice:</strong>
+                <ul>
+                    <li>Dockerize existing applications</li>
+                    <li>Create full-stack applications with Docker Compose</li>
+                    <li>Build CI/CD pipelines using Docker</li>
+                    <li>Contribute to open-source Dockerfiles</li>
+                </ul>
+            </li>
+            <li><strong>YouTube Channels:</strong>
+                <ul>
+                    <li>TechWorld with Nana</li>
+                    <li>Docker (official)</li>
+                    <li>Fireship</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>💡 Best Practices</h2>
+        
+        <div class="best-practice">
+            <h3>Dockerfile Best Practices</h3>
+            <ul>
+                <li>Use specific image tags (not :latest)</li>
+                <li>Use multi-stage builds to reduce image size</li>
+                <li>Minimize layers by combining RUN commands</li>
+                <li>Order instructions from least to most frequently changing</li>
+                <li>Use .dockerignore to exclude unnecessary files</li>
+                <li>Run containers as non-root users</li>
+                <li>Use COPY instead of ADD unless needed</li>
+                <li>Leverage build cache effectively</li>
+            </ul>
+        </div>
+
+        <div class="best-practice">
+            <h3>Container Best Practices</h3>
+            <ul>
+                <li>One process per container</li>
+                <li>Keep containers ephemeral and stateless</li>
+                <li>Use volumes for persistent data</li>
+                <li>Implement health checks</li>
+                <li>Set resource limits (CPU, memory)</li>
+                <li>Use restart policies appropriately</li>
+                <li>Properly handle signals (SIGTERM)</li>
+                <li>Tag images with meaningful versions</li>
+            </ul>
+        </div>
+
+        <div class="best-practice">
+            <h3>Production Best Practices</h3>
+            <ul>
+                <li>Scan images for vulnerabilities regularly</li>
+                <li>Use private registries for proprietary code</li>
+                <li>Implement proper logging strategies</li>
+                <li>Monitor container performance</li>
+                <li>Use orchestration tools (Kubernetes, Swarm)</li>
+                <li>Implement automated backups</li>
+                <li>Use secrets management tools</li>
+                <li>Regular security updates</li>
+            </ul>
+        </div>
+
+        <h2>🛠️ Practical Commands Cheat Sheet</h2>
+        
+        <div class="command-example">
+            <strong>Image Operations:</strong><br>
+            docker pull nginx<br>
+            docker images<br>
+            docker build -t myapp:1.0 .<br>
+            docker tag myapp:1.0 user/myapp:1.0<br>
+            docker push user/myapp:1.0<br><br>
+
+            <strong>Container Operations:</strong><br>
+            docker run -d -p 8080:80 --name web nginx<br>
+            docker ps<br>
+            docker logs -f web<br>
+            docker exec -it web bash<br>
+            docker stop web<br>
+            docker rm web<br><br>
+
+            <strong>Network & Volume:</strong><br>
+            docker network create mynetwork<br>
+            docker volume create myvolume<br>
+            docker run -v myvolume:/data --network mynetwork myapp<br><br>
+
+            <strong>Cleanup:</strong><br>
+            docker system prune -a<br>
+            docker volume prune<br>
+            docker network prune
+        </div>
+
+        <div class="important">
+            <strong>✅ Interview Ready Checklist:</strong>
+            <ul>
+                <li>Successfully containerized multiple applications</li>
+                <li>Written optimized Dockerfiles with multi-stage builds</li>
+                <li>Created complex Docker Compose setups</li>
+                <li>Understand Docker networking and volumes thoroughly</li>
+                <li>Know security best practices</li>
+                <li>Can debug container issues efficiently</li>
+                <li>Familiar with CI/CD integration</li>
+                <li>Understand container orchestration concepts</li>
+                <li>Completed hands-on projects using Docker</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

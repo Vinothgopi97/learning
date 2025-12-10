@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Interview Preparation Plan</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #ff9a56 0%, #ff6a00 100%);
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #ff9a56;
+            text-align: center;
+            border-bottom: 3px solid #ff9a56;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #ff6a00;
+            margin-top: 30px;
+            border-left: 4px solid #ff9a56;
+            padding-left: 10px;
+        }
+        h3 {
+            color: #555;
+            margin-top: 20px;
+        }
+        ul {
+            margin: 10px 0;
+        }
+        li {
+            margin: 8px 0;
+            line-height: 1.8;
+        }
+        .week {
+            background: #f8f9fa;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+            border-left: 4px solid #ff9a56;
+        }
+        .important {
+            background: #fff3e0;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 15px 0;
+            border-left: 4px solid #ff9800;
+        }
+        .service-category {
+            background: #ffebee;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        .certification-tip {
+            background: #e8f5e9;
+            padding: 8px;
+            border-radius: 4px;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>☁️ AWS Interview Preparation Plan</h1>
+        
+        <div class="important">
+            <strong>📌 Goal:</strong> Master Amazon Web Services for cloud solutions architecture<br>
+            <strong>⏱️ Duration:</strong> 8-10 weeks<br>
+            <strong>📊 Daily Time:</strong> 2-3 hours<br>
+            <strong>🎯 Target:</strong> Interview readiness + AWS Solutions Architect Associate level knowledge
+        </div>
+
+        <h2>☁️ Phase 1: Cloud Computing Fundamentals (Week 1)</h2>
+        
+        <div class="week">
+            <h3>Cloud Computing Basics</h3>
+            <ul>
+                <li><strong>Cloud Concepts:</strong>
+                    <ul>
+                        <li>What is cloud computing? Benefits and characteristics</li>
+                        <li>Cloud service models: IaaS, PaaS, SaaS</li>
+                        <li>Deployment models: Public, Private, Hybrid, Multi-cloud</li>
+                        <li>Cloud vs On-premises comparison</li>
+                    </ul>
+                </li>
+                <li><strong>AWS Fundamentals:</strong>
+                    <ul>
+                        <li>AWS Global Infrastructure (Regions, Availability Zones, Edge Locations)</li>
+                        <li>AWS Management Console, CLI, SDKs</li>
+                        <li>AWS account basics and free tier</li>
+                        <li>AWS Well-Architected Framework principles</li>
+                    </ul>
+                </li>
+                <li><strong>Core AWS Services Overview:</strong>
+                    <ul>
+                        <li>Compute: EC2, Lambda</li>
+                        <li>Storage: S3, EBS</li>
+                        <li>Database: RDS, DynamoDB</li>
+                        <li>Networking: VPC, Route 53</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="certification-tip">
+                <strong>Setup:</strong> Create AWS free tier account and explore console
+            </div>
+        </div>
+
+        <h2>💻 Phase 2: Compute Services (Week 2)</h2>
+        
+        <div class="week">
+            <h3>EC2 & Elastic Compute</h3>
+            <ul>
+                <li><strong>Amazon EC2:</strong>
+                    <ul>
+                        <li>Instance types (General purpose, Compute optimized, Memory optimized, etc.)</li>
+                        <li>AMI (Amazon Machine Images)</li>
+                        <li>Instance lifecycle (launch, stop, terminate)</li>
+                        <li>User data and metadata</li>
+                        <li>Pricing models: On-Demand, Reserved, Spot, Savings Plans</li>
+                        <li>Placement groups</li>
+                    </ul>
+                </li>
+                <li><strong>EC2 Storage:</strong>
+                    <ul>
+                        <li>EBS (Elastic Block Store) volume types</li>
+                        <li>EBS snapshots and backups</li>
+                        <li>Instance store vs EBS</li>
+                        <li>EBS encryption</li>
+                    </ul>
+                </li>
+                <li><strong>Elastic Load Balancing:</strong>
+                    <ul>
+                        <li>Application Load Balancer (Layer 7)</li>
+                        <li>Network Load Balancer (Layer 4)</li>
+                        <li>Gateway Load Balancer</li>
+                        <li>Target groups and health checks</li>
+                        <li>Cross-zone load balancing</li>
+                    </ul>
+                </li>
+                <li><strong>Auto Scaling:</strong>
+                    <ul>
+                        <li>Auto Scaling Groups (ASG)</li>
+                        <li>Launch templates and configurations</li>
+                        <li>Scaling policies (target tracking, step, scheduled)</li>
+                        <li>Health checks and instance replacement</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="service-category">
+                <strong>Practice:</strong> Launch EC2 instances, configure ALB with ASG
+            </div>
+        </div>
+
+        <h2>📦 Phase 3: Storage Services (Week 3)</h2>
+        
+        <div class="week">
+            <h3>S3 & Storage Solutions</h3>
+            <ul>
+                <li><strong>Amazon S3:</strong>
+                    <ul>
+                        <li>Buckets, objects, and keys</li>
+                        <li>Storage classes (Standard, IA, Glacier, etc.)</li>
+                        <li>Versioning and lifecycle policies</li>
+                        <li>S3 encryption (SSE-S3, SSE-KMS, SSE-C)</li>
+                        <li>Static website hosting</li>
+                        <li>Cross-region replication (CRR)</li>
+                        <li>S3 Transfer Acceleration</li>
+                        <li>Multipart upload</li>
+                    </ul>
+                </li>
+                <li><strong>S3 Security:</strong>
+                    <ul>
+                        <li>Bucket policies vs IAM policies</li>
+                        <li>Access Control Lists (ACLs)</li>
+                        <li>Block public access settings</li>
+                        <li>Pre-signed URLs</li>
+                        <li>CORS configuration</li>
+                    </ul>
+                </li>
+                <li><strong>Other Storage Services:</strong>
+                    <ul>
+                        <li>EFS (Elastic File System) - NFS protocol</li>
+                        <li>FSx (Windows File Server, Lustre)</li>
+                        <li>Storage Gateway (hybrid cloud storage)</li>
+                        <li>AWS Backup</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="service-category">
+                <strong>Practice:</strong> Create S3 buckets, configure policies, lifecycle rules
+            </div>
+        </div>
+
+        <h2>💾 Phase 4: Database Services (Week 4)</h2>
+        
+        <div class="week">
+            <h3>RDS, DynamoDB & Caching</h3>
+            <ul>
+                <li><strong>Amazon RDS:</strong>
+                    <ul>
+                        <li>Supported engines (MySQL, PostgreSQL, Oracle, SQL Server, MariaDB)</li>
+                        <li>Multi-AZ deployments for HA</li>
+                        <li>Read replicas for scaling</li>
+                        <li>Automated backups and snapshots</li>
+                        <li>Parameter groups and option groups</li>
+                        <li>RDS Proxy</li>
+                    </ul>
+                </li>
+                <li><strong>Amazon Aurora:</strong>
+                    <ul>
+                        <li>Aurora MySQL and PostgreSQL compatibility</li>
+                        <li>Aurora Serverless</li>
+                        <li>Global databases</li>
+                        <li>Performance advantages</li>
+                    </ul>
+                </li>
+                <li><strong>Amazon DynamoDB:</strong>
+                    <ul>
+                        <li>NoSQL database concepts</li>
+                        <li>Tables, items, attributes</li>
+                        <li>Primary keys (partition key, sort key)</li>
+                        <li>Read/Write capacity units (provisioned vs on-demand)</li>
+                        <li>Global secondary indexes (GSI) and local secondary indexes (LSI)</li>
+                        <li>DynamoDB Streams</li>
+                        <li>DynamoDB Accelerator (DAX)</li>
+                    </ul>
+                </li>
+                <li><strong>Caching & Other Databases:</strong>
+                    <ul>
+                        <li>ElastiCache (Redis, Memcached)</li>
+                        <li>Redshift (data warehousing)</li>
+                        <li>DocumentDB (MongoDB compatible)</li>
+                        <li>Neptune (graph database)</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="service-category">
+                <strong>Practice:</strong> Create RDS instance, DynamoDB table with GSI
+            </div>
+        </div>
+
+        <h2>🌐 Phase 5: Networking & Content Delivery (Week 5)</h2>
+        
+        <div class="week">
+            <h3>VPC & Networking</h3>
+            <ul>
+                <li><strong>Amazon VPC:</strong>
+                    <ul>
+                        <li>VPC fundamentals, CIDR blocks</li>
+                        <li>Subnets (public vs private)</li>
+                        <li>Internet Gateway (IGW)</li>
+                        <li>NAT Gateway vs NAT Instance</li>
+                        <li>Route tables and routing</li>
+                        <li>Security Groups vs NACLs</li>
+                        <li>VPC Peering</li>
+                        <li>VPC Endpoints (Gateway, Interface)</li>
+                    </ul>
+                </li>
+                <li><strong>Hybrid Connectivity:</strong>
+                    <ul>
+                        <li>VPN (Virtual Private Network)</li>
+                        <li>Direct Connect</li>
+                        <li>Transit Gateway</li>
+                    </ul>
+                </li>
+                <li><strong>Route 53:</strong>
+                    <ul>
+                        <li>DNS basics and hosted zones</li>
+                        <li>Record types (A, AAAA, CNAME, Alias)</li>
+                        <li>Routing policies (Simple, Weighted, Latency, Failover, Geolocation)</li>
+                        <li>Health checks</li>
+                    </ul>
+                </li>
+                <li><strong>CloudFront:</strong>
+                    <ul>
+                        <li>Content Delivery Network (CDN) concepts</li>
+                        <li>Origins (S3, custom)</li>
+                        <li>Cache behaviors and TTL</li>
+                        <li>Signed URLs and cookies</li>
+                        <li>Lambda@Edge</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="service-category">
+                <strong>Practice:</strong> Create VPC with public/private subnets, configure security groups
+            </div>
+        </div>
+
+        <h2>⚡ Phase 6: Serverless & Application Services (Week 6)</h2>
+        
+        <div class="week">
+            <h3>Lambda, API Gateway & Serverless</h3>
+            <ul>
+                <li><strong>AWS Lambda:</strong>
+                    <ul>
+                        <li>Function as a Service (FaaS) concepts</li>
+                        <li>Supported runtimes</li>
+                        <li>Event-driven architecture</li>
+                        <li>Lambda triggers (S3, DynamoDB, API Gateway, etc.)</li>
+                        <li>Execution role and permissions</li>
+                        <li>Cold starts and performance optimization</li>
+                        <li>Lambda layers</li>
+                        <li>Concurrency and throttling</li>
+                    </ul>
+                </li>
+                <li><strong>API Gateway:</strong>
+                    <ul>
+                        <li>REST APIs vs HTTP APIs vs WebSocket APIs</li>
+                        <li>Integration types (Lambda, HTTP, AWS services)</li>
+                        <li>Stages and deployments</li>
+                        <li>Request/response transformations</li>
+                        <li>API keys and usage plans</li>
+                        <li>CORS configuration</li>
+                    </ul>
+                </li>
+                <li><strong>Messaging Services:</strong>
+                    <ul>
+                        <li>SNS (Simple Notification Service) - pub/sub</li>
+                        <li>SQS (Simple Queue Service) - message queuing</li>
+                        <li>SQS Standard vs FIFO queues</li>
+                        <li>Dead letter queues (DLQ)</li>
+                        <li>EventBridge (event bus)</li>
+                    </ul>
+                </li>
+                <li><strong>Other Application Services:</strong>
+                    <ul>
+                        <li>Step Functions (workflow orchestration)</li>
+                        <li>AppSync (GraphQL)</li>
+                        <li>Kinesis (streaming data)</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="service-category">
+                <strong>Practice:</strong> Build serverless API with Lambda + API Gateway + DynamoDB
+            </div>
+        </div>
+
+        <h2>🔐 Phase 7: Security & Identity (Week 7)</h2>
+        
+        <div class="week">
+            <h3>IAM, Security & Compliance</h3>
+            <ul>
+                <li><strong>IAM (Identity and Access Management):</strong>
+                    <ul>
+                        <li>Users, groups, roles, policies</li>
+                        <li>IAM policy structure (Effect, Action, Resource, Condition)</li>
+                        <li>Identity-based vs resource-based policies</li>
+                        <li>Policy evaluation logic</li>
+                        <li>MFA (Multi-Factor Authentication)</li>
+                        <li>Service roles and assume role</li>
+                        <li>IAM best practices (least privilege)</li>
+                        <li>IAM Identity Center (SSO)</li>
+                    </ul>
+                </li>
+                <li><strong>Security Services:</strong>
+                    <ul>
+                        <li>KMS (Key Management Service) - encryption keys</li>
+                        <li>Secrets Manager - credential rotation</li>
+                        <li>Certificate Manager (ACM)</li>
+                        <li>WAF (Web Application Firewall)</li>
+                        <li>Shield (DDoS protection)</li>
+                        <li>GuardDuty (threat detection)</li>
+                        <li>Inspector (vulnerability assessment)</li>
+                        <li>Macie (data security)</li>
+                    </ul>
+                </li>
+                <li><strong>Compliance & Governance:</strong>
+                    <ul>
+                        <li>CloudTrail (audit logging)</li>
+                        <li>Config (resource compliance)</li>
+                        <li>Organizations (multi-account management)</li>
+                        <li>Service Control Policies (SCPs)</li>
+                        <li>Shared Responsibility Model</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="service-category">
+                <strong>Practice:</strong> Create IAM roles, policies; encrypt S3 with KMS
+            </div>
+        </div>
+
+        <h2>📊 Phase 8: Monitoring, Deployment & Management (Week 8)</h2>
+        
+        <div class="week">
+            <h3>CloudWatch, CloudFormation & DevOps</h3>
+            <ul>
+                <li><strong>CloudWatch:</strong>
+                    <ul>
+                        <li>Metrics and namespaces</li>
+                        <li>Custom metrics</li>
+                        <li>Alarms and notifications</li>
+                        <li>CloudWatch Logs and log groups</li>
+                        <li>Log insights and queries</li>
+                        <li>CloudWatch Events/EventBridge</li>
+                        <li>CloudWatch dashboards</li>
+                    </ul>
+                </li>
+                <li><strong>Infrastructure as Code:</strong>
+                    <ul>
+                        <li>CloudFormation templates (JSON/YAML)</li>
+                        <li>Stacks, stack sets</li>
+                        <li>Parameters, mappings, conditions</li>
+                        <li>Intrinsic functions</li>
+                        <li>Change sets</li>
+                        <li>Nested stacks</li>
+                        <li>CDK (Cloud Development Kit) overview</li>
+                    </ul>
+                </li>
+                <li><strong>Deployment Services:</strong>
+                    <ul>
+                        <li>Elastic Beanstalk (PaaS)</li>
+                        <li>CodeDeploy (application deployment)</li>
+                        <li>CodePipeline (CI/CD)</li>
+                        <li>CodeBuild, CodeCommit</li>
+                    </ul>
+                </li>
+                <li><strong>Management Tools:</strong>
+                    <ul>
+                        <li>Systems Manager (SSM) - parameter store, session manager</li>
+                        <li>Trusted Advisor (recommendations)</li>
+                        <li>Cost Explorer and billing</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="service-category">
+                <strong>Practice:</strong> Create CloudFormation template, set up CloudWatch alarms
+            </div>
+        </div>
+
+        <h2>🐳 Phase 9: Containers & Advanced Topics (Week 9)</h2>
+        
+        <div class="week">
+            <h3>ECS, EKS & Advanced Services</h3>
+            <ul>
+                <li><strong>Container Services:</strong>
+                    <ul>
+                        <li>ECR (Elastic Container Registry)</li>
+                        <li>ECS (Elastic Container Service) - task definitions, services</li>
+                        <li>Fargate (serverless containers)</li>
+                        <li>EKS (Elastic Kubernetes Service)</li>
+                        <li>ECS vs EKS comparison</li>
+                    </ul>
+                </li>
+                <li><strong>Advanced Compute:</strong>
+                    <ul>
+                        <li>Batch (batch processing)</li>
+                        <li>Lightsail (simplified VPS)</li>
+                        <li>Outposts (on-premises AWS)</li>
+                    </ul>
+                </li>
+                <li><strong>Analytics & ML:</strong>
+                    <ul>
+                        <li>Athena (query S3 with SQL)</li>
+                        <li>EMR (Hadoop/Spark)</li>
+                        <li>Glue (ETL service)</li>
+                        <li>SageMaker (machine learning) basics</li>
+                    </ul>
+                </li>
+                <li><strong>Migration & Transfer:</strong>
+                    <ul>
+                        <li>Snow family (Snowball, Snowmobile)</li>
+                        <li>Database Migration Service (DMS)</li>
+                        <li>Application Migration Service</li>
+                        <li>DataSync</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <h2>🏗️ Phase 10: Architecture & Best Practices (Week 10)</h2>
+        
+        <div class="week">
+            <h3>Well-Architected Framework</h3>
+            <ul>
+                <li><strong>Six Pillars:</strong>
+                    <ul>
+                        <li><strong>Operational Excellence:</strong> Run and monitor systems</li>
+                        <li><strong>Security:</strong> Protect information and systems</li>
+                        <li><strong>Reliability:</strong> Ensure workload performs as intended</li>
+                        <li><strong>Performance Efficiency:</strong> Use resources efficiently</li>
+                        <li><strong>Cost Optimization:</strong> Avoid unnecessary costs</li>
+                        <li><strong>Sustainability:</strong> Minimize environmental impact</li>
+                    </ul>
+                </li>
+                <li><strong>Design Patterns:</strong>
+                    <ul>
+                        <li>High availability and fault tolerance</li>
+                        <li>Disaster recovery strategies</li>
+                        <li>Decoupling applications</li>
+                        <li>Event-driven architectures</li>
+                        <li>Microservices on AWS</li>
+                    </ul>
+                </li>
+                <li><strong>Real-World Scenarios:</strong>
+                    <ul>
+                        <li>3-tier web application architecture</li>
+                        <li>Serverless application design</li>
+                        <li>Data lake architecture</li>
+                        <li>Hybrid cloud setup</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <h2>🎤 Common Interview Questions</h2>
+        
+        <div class="important">
+            <h3>Fundamental Concepts</h3>
+            <ul>
+                <li>Explain AWS global infrastructure (Regions, AZs, Edge Locations)</li>
+                <li>What is the difference between S3 and EBS?</li>
+                <li>Explain Security Groups vs NACLs</li>
+                <li>What is the difference between IAM roles and IAM users?</li>
+                <li>How does Auto Scaling work?</li>
+                <li>What are the different EC2 pricing models?</li>
+                <li>Explain the difference between ELB types (ALB, NLB, GLB)</li>
+            </ul>
+        </div>
+
+        <div class="important">
+            <h3>Scenario-Based</h3>
+            <ul>
+                <li>Design a highly available web application architecture</li>
+                <li>How would you migrate an on-premises database to AWS?</li>
+                <li>Implement disaster recovery for critical applications</li>
+                <li>Optimize costs for an over-provisioned environment</li>
+                <li>Design a serverless REST API</li>
+                <li>Handle traffic spikes for a web application</li>
+                <li>Secure sensitive data in S3</li>
+                <li>Implement blue-green deployment strategy</li>
+            </ul>
+        </div>
+
+        <div class="important">
+            <h3>Advanced Topics</h3>
+            <ul>
+                <li>How does DynamoDB partitioning work?</li>
+                <li>Explain Lambda cold starts and optimization</li>
+                <li>What is CloudFront caching strategy?</li>
+                <li>How do you troubleshoot connectivity issues in VPC?</li>
+                <li>Difference between RDS Multi-AZ and Read Replicas</li>
+                <li>When to use SQS vs SNS vs Kinesis?</li>
+                <li>Explain AWS Shared Responsibility Model</li>
+            </ul>
+        </div>
+
+        <h2>📖 Recommended Resources</h2>
+        <ul>
+            <li><strong>Official AWS:</strong>
+                <ul>
+                    <li>AWS Documentation (docs.aws.amazon.com)</li>
+                    <li>AWS Skill Builder (free training)</li>
+                    <li>AWS Whitepapers (Well-Architected Framework)</li>
+                    <li>AWS re:Invent videos</li>
+                </ul>
+            </li>
+            <li><strong>Courses:</strong>
+                <ul>
+                    <li>Stephane Maarek's AWS courses (Udemy)</li>
+                    <li>A Cloud Guru / Pluralsight</li>
+                    <li>Linux Academy</li>
+                </ul>
+            </li>
+            <li><strong>Practice:</strong>
+                <ul>
+                    <li>AWS Free Tier hands-on</li>
+                    <li>Tutorials Dojo practice exams</li>
+                    <li>QwikLabs / AWS Workshops</li>
+                </ul>
+            </li>
+            <li><strong>Certification Path:</strong>
+                <ul>
+                    <li>AWS Certified Cloud Practitioner (foundational)</li>
+                    <li>AWS Certified Solutions Architect - Associate</li>
+                    <li>AWS Certified Developer - Associate</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>💡 Best Practices</h2>
+        <ul>
+            <li>Follow the principle of least privilege for IAM</li>
+            <li>Enable MFA for all privileged accounts</li>
+            <li>Use multiple AZs for high availability</li>
+            <li>Implement proper tagging strategy for cost allocation</li>
+            <li>Encrypt data at rest and in transit</li>
+            <li>Use CloudFormation/IaC for reproducible infrastructure</li>
+            <li>Enable CloudTrail for audit logging</li>
+            <li>Regular backup and disaster recovery testing</li>
+            <li>Monitor costs with billing alarms</li>
+            <li>Use VPC endpoints to reduce data transfer costs</li>
+            <li>Implement auto-scaling for variable workloads</li>
+            <li>Use managed services when possible</li>
+        </ul>
+
+        <div class="important">
+            <strong>✅ Interview Ready Checklist:</strong>
+            <ul>
+                <li>Hands-on experience with core AWS services (EC2, S3, RDS, Lambda, VPC)</li>
+                <li>Can design multi-tier, highly available architectures</li>
+                <li>Understand IAM policies and security best practices</li>
+                <li>Know serverless architecture patterns</li>
+                <li>Familiar with AWS pricing and cost optimization</li>
+                <li>Completed practice exams (Solutions Architect level)</li>
+                <li>Built at least 2-3 real projects on AWS</li>
+                <li>Understand monitoring, logging, and troubleshooting</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

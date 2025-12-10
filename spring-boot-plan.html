@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Spring Boot Interview Preparation Plan</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #11998e;
+            text-align: center;
+            border-bottom: 3px solid #11998e;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #38ef7d;
+            color: #11998e;
+            margin-top: 30px;
+            border-left: 4px solid #11998e;
+            padding-left: 10px;
+        }
+        h3 {
+            color: #555;
+            margin-top: 20px;
+        }
+        ul {
+            margin: 10px 0;
+        }
+        li {
+            margin: 8px 0;
+            line-height: 1.8;
+        }
+        .week {
+            background: #f8f9fa;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+            border-left: 4px solid #11998e;
+        }
+        .important {
+            background: #d4edda;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 15px 0;
+            border-left: 4px solid #28a745;
+        }
+        .code-topic {
+            background: #e7f3ff;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        .annotation {
+            background: #fff3cd;
+            padding: 8px;
+            border-radius: 4px;
+            margin: 5px 0;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>☕ Java Spring Boot Interview Preparation Plan</h1>
+        
+        <div class="important">
+            <strong>📌 Goal:</strong> Master Spring Boot framework and enterprise Java development<br>
+            <strong>⏱️ Duration:</strong> 8-10 weeks<br>
+            <strong>📊 Daily Time:</strong> 2-3 hours
+        </div>
+
+        <h2>🌱 Phase 1: Java Fundamentals Review (Week 1)</h2>
+        
+        <div class="week">
+            <h3>Core Java Concepts</h3>
+            <ul>
+                <li><strong>OOP Principles:</strong>
+                    <ul>
+                        <li>Encapsulation, Inheritance, Polymorphism, Abstraction</li>
+                        <li>SOLID principles</li>
+                        <li>Design patterns (Singleton, Factory, Builder, Observer)</li>
+                    </ul>
+                </li>
+                <li><strong>Collections Framework:</strong>
+                    <ul>
+                        <li>List, Set, Map implementations</li>
+                        <li>HashMap vs ConcurrentHashMap</li>
+                        <li>ArrayList vs LinkedList</li>
+                    </ul>
+                </li>
+                <li><strong>Multithreading & Concurrency:</strong>
+                    <ul>
+                        <li>Thread lifecycle, synchronization</li>
+                        <li>ExecutorService, ThreadPool</li>
+                        <li>CompletableFuture</li>
+                    </ul>
+                </li>
+                <li><strong>Java 8+ Features:</strong>
+                    <ul>
+                        <li>Lambda expressions, Stream API</li>
+                        <li>Optional, Method references</li>
+                        <li>Functional interfaces</li>
+                    </ul>
+                </li>
+                <li><strong>Exception Handling & Memory Management:</strong>
+                    <ul>
+                        <li>Try-catch-finally, custom exceptions</li>
+                        <li>JVM architecture, Garbage Collection</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <h2>🚀 Phase 2: Spring Framework Basics (Weeks 2-3)</h2>
+        
+        <div class="week">
+            <h3>Week 2: Spring Core & Dependency Injection</h3>
+            <ul>
+                <li><strong>Inversion of Control (IoC):</strong>
+                    <ul>
+                        <li>What is IoC and why use it?</li>
+                        <li>ApplicationContext vs BeanFactory</li>
+                        <li>Spring Container lifecycle</li>
+                    </ul>
+                </li>
+                <li><strong>Dependency Injection:</strong>
+                    <ul>
+                        <li>Constructor vs Setter vs Field injection</li>
+                        <li>@Autowired, @Qualifier, @Primary</li>
+                        <li>Bean scopes (Singleton, Prototype, Request, Session)</li>
+                    </ul>
+                </li>
+                <li><strong>Configuration:</strong>
+                    <ul>
+                        <li>XML vs Java-based vs Annotation-based config</li>
+                        <li>@Configuration, @Bean, @Component</li>
+                        <li>Component scanning</li>
+                    </ul>
+                </li>
+                <li><strong>Bean Lifecycle:</strong>
+                    <ul>
+                        <li>@PostConstruct, @PreDestroy</li>
+                        <li>InitializingBean, DisposableBean</li>
+                        <li>BeanPostProcessor</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="code-topic">
+                <strong>Practice:</strong> Build a simple dependency injection example
+            </div>
+        </div>
+
+        <div class="week">
+            <h3>Week 3: Spring AOP & Data Access</h3>
+            <ul>
+                <li><strong>Aspect-Oriented Programming:</strong>
+                    <ul>
+                        <li>Concepts: Aspect, Advice, Pointcut, Join point</li>
+                        <li>@Before, @After, @Around, @AfterReturning, @AfterThrowing</li>
+                        <li>Use cases: Logging, Security, Transactions</li>
+                    </ul>
+                </li>
+                <li><strong>Spring JDBC & JPA:</strong>
+                    <ul>
+                        <li>JdbcTemplate basics</li>
+                        <li>Spring Data JPA introduction</li>
+                        <li>EntityManager, PersistenceContext</li>
+                    </ul>
+                </li>
+                <li><strong>Transaction Management:</strong>
+                    <ul>
+                        <li>@Transactional annotation</li>
+                        <li>Propagation levels (REQUIRED, REQUIRES_NEW, etc.)</li>
+                        <li>Isolation levels</li>
+                        <li>Rollback rules</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="code-topic">
+                <strong>Practice:</strong> Create logging aspect and transactional service
+            </div>
+        </div>
+
+        <h2>🎯 Phase 3: Spring Boot Core (Weeks 4-5)</h2>
+        
+        <div class="week">
+            <h3>Week 4: Spring Boot Fundamentals</h3>
+            <ul>
+                <li><strong>Spring Boot Basics:</strong>
+                    <ul>
+                        <li>What is Spring Boot and advantages over Spring</li>
+                        <li>Auto-configuration concept</li>
+                        <li>Starter dependencies</li>
+                        <li>Embedded servers (Tomcat, Jetty, Undertow)</li>
+                    </ul>
+                </li>
+                <li><strong>Application Structure:</strong>
+                    <ul>
+                        <li>@SpringBootApplication annotation</li>
+                        <li>Main application class</li>
+                        <li>Package structure best practices</li>
+                    </ul>
+                </li>
+                <li><strong>Configuration:</strong>
+                    <ul>
+                        <li>application.properties vs application.yml</li>
+                        <li>@Value, @ConfigurationProperties</li>
+                        <li>Profiles (@Profile, spring.profiles.active)</li>
+                        <li>Externalized configuration</li>
+                    </ul>
+                </li>
+                <li><strong>Logging:</strong>
+                    <ul>
+                        <li>SLF4J, Logback configuration</li>
+                        <li>Log levels and patterns</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="code-topic">
+                <strong>Practice:</strong> Create Spring Boot app with multiple profiles
+            </div>
+        </div>
+
+        <div class="week">
+            <h3>Week 5: RESTful Web Services</h3>
+            <ul>
+                <li><strong>REST Principles:</strong>
+                    <ul>
+                        <li>HTTP methods (GET, POST, PUT, DELETE, PATCH)</li>
+                        <li>Status codes (200, 201, 400, 404, 500, etc.)</li>
+                        <li>RESTful best practices</li>
+                    </ul>
+                </li>
+                <li><strong>Spring MVC / Spring Web:</strong>
+                    <ul>
+                        <li>@RestController, @RequestMapping</li>
+                        <li>@GetMapping, @PostMapping, @PutMapping, @DeleteMapping</li>
+                        <li>@PathVariable, @RequestParam, @RequestBody</li>
+                        <li>ResponseEntity, HttpStatus</li>
+                    </ul>
+                </li>
+                <li><strong>Request/Response Handling:</strong>
+                    <ul>
+                        <li>Content negotiation (JSON, XML)</li>
+                        <li>Jackson for JSON serialization</li>
+                        <li>Custom serializers/deserializers</li>
+                    </ul>
+                </li>
+                <li><strong>Validation:</strong>
+                    <ul>
+                        <li>@Valid, @Validated</li>
+                        <li>Bean Validation annotations (@NotNull, @Size, @Email, etc.)</li>
+                        <li>Custom validators</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="code-topic">
+                <strong>Practice:</strong> Build complete CRUD REST API
+            </div>
+        </div>
+
+        <h2>💾 Phase 4: Data Access & Persistence (Week 6)</h2>
+        
+        <div class="week">
+            <h3>Spring Data JPA</h3>
+            <ul>
+                <li><strong>JPA Basics:</strong>
+                    <ul>
+                        <li>@Entity, @Table, @Id, @GeneratedValue</li>
+                        <li>@Column, @Temporal, @Enumerated</li>
+                        <li>Entity lifecycle states</li>
+                    </ul>
+                </li>
+                <li><strong>Relationships:</strong>
+                    <ul>
+                        <li>@OneToOne, @OneToMany, @ManyToOne, @ManyToMany</li>
+                        <li>Cascade types and fetch types (LAZY vs EAGER)</li>
+                        <li>@JoinColumn, @JoinTable</li>
+                    </ul>
+                </li>
+                <li><strong>Spring Data Repositories:</strong>
+                    <ul>
+                        <li>JpaRepository, CrudRepository, PagingAndSortingRepository</li>
+                        <li>Query methods (findBy, countBy, deleteBy)</li>
+                        <li>@Query annotation (JPQL and native SQL)</li>
+                        <li>Named queries and specifications</li>
+                    </ul>
+                </li>
+                <li><strong>Advanced Topics:</strong>
+                    <ul>
+                        <li>Pagination and sorting</li>
+                        <li>Projections and DTOs</li>
+                        <li>Auditing (@CreatedDate, @LastModifiedDate)</li>
+                        <li>N+1 query problem and solutions</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="code-topic">
+                <strong>Practice:</strong> Build application with complex entity relationships
+            </div>
+        </div>
+
+        <h2>🔒 Phase 5: Security & Advanced Topics (Weeks 7-8)</h2>
+        
+        <div class="week">
+            <h3>Week 7: Spring Security</h3>
+            <ul>
+                <li><strong>Security Fundamentals:</strong>
+                    <ul>
+                        <li>Authentication vs Authorization</li>
+                        <li>SecurityContext, SecurityContextHolder</li>
+                        <li>UserDetailsService</li>
+                    </ul>
+                </li>
+                <li><strong>Configuration:</strong>
+                    <ul>
+                        <li>SecurityFilterChain configuration</li>
+                        <li>In-memory, JDBC, and custom authentication</li>
+                        <li>Password encoding (BCrypt)</li>
+                    </ul>
+                </li>
+                <li><strong>Authorization:</strong>
+                    <ul>
+                        <li>Role-based access control (RBAC)</li>
+                        <li>@PreAuthorize, @PostAuthorize, @Secured</li>
+                        <li>Method-level security</li>
+                    </ul>
+                </li>
+                <li><strong>JWT & OAuth2:</strong>
+                    <ul>
+                        <li>JWT token structure and validation</li>
+                        <li>OAuth2 flow (Authorization Code, Client Credentials)</li>
+                        <li>Resource server configuration</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="code-topic">
+                <strong>Practice:</strong> Implement JWT-based authentication system
+            </div>
+        </div>
+
+        <div class="week">
+            <h3>Week 8: Exception Handling & Testing</h3>
+            <ul>
+                <li><strong>Exception Handling:</strong>
+                    <ul>
+                        <li>@ExceptionHandler, @ControllerAdvice</li>
+                        <li>ResponseEntityExceptionHandler</li>
+                        <li>Custom error responses</li>
+                        <li>Global exception handling</li>
+                    </ul>
+                </li>
+                <li><strong>Testing:</strong>
+                    <ul>
+                        <li>JUnit 5, Mockito</li>
+                        <li>@SpringBootTest, @WebMvcTest, @DataJpaTest</li>
+                        <li>MockMvc for controller testing</li>
+                        <li>@MockBean, @SpyBean</li>
+                        <li>Integration testing</li>
+                        <li>Test containers for database testing</li>
+                    </ul>
+                </li>
+                <li><strong>Documentation:</strong>
+                    <ul>
+                        <li>Swagger/OpenAPI (SpringDoc)</li>
+                        <li>API documentation best practices</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="code-topic">
+                <strong>Practice:</strong> Write comprehensive test suite for REST API
+            </div>
+        </div>
+
+        <h2>⚡ Phase 6: Microservices & Production (Weeks 9-10)</h2>
+        
+        <div class="week">
+            <h3>Week 9: Microservices Concepts</h3>
+            <ul>
+                <li><strong>Spring Cloud:</strong>
+                    <ul>
+                        <li>Service discovery (Eureka)</li>
+                        <li>API Gateway (Spring Cloud Gateway)</li>
+                        <li>Load balancing (Ribbon/Spring Cloud LoadBalancer)</li>
+                        <li>Circuit breaker (Resilience4j)</li>
+                    </ul>
+                </li>
+                <li><strong>Communication:</strong>
+                    <ul>
+                        <li>Feign Client for REST calls</li>
+                        <li>RestTemplate vs WebClient</li>
+                        <li>Message queues (RabbitMQ, Kafka) basics</li>
+                    </ul>
+                </li>
+                <li><strong>Configuration Management:</strong>
+                    <ul>
+                        <li>Spring Cloud Config Server</li>
+                        <li>Distributed tracing (Sleuth, Zipkin)</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="week">
+            <h3>Week 10: Production Readiness</h3>
+            <ul>
+                <li><strong>Actuator:</strong>
+                    <ul>
+                        <li>Health checks, metrics</li>
+                        <li>Custom endpoints</li>
+                        <li>Monitoring integration (Prometheus, Grafana)</li>
+                    </ul>
+                </li>
+                <li><strong>Performance:</strong>
+                    <ul>
+                        <li>Caching (@Cacheable, Redis)</li>
+                        <li>Async processing (@Async)</li>
+                        <li>Scheduled tasks (@Scheduled)</li>
+                        <li>Connection pooling (HikariCP)</li>
+                    </ul>
+                </li>
+                <li><strong>Best Practices:</strong>
+                    <ul>
+                        <li>12-factor app principles</li>
+                        <li>Environment-specific configurations</li>
+                        <li>Logging strategies</li>
+                        <li>Error handling patterns</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="code-topic">
+                <strong>Practice:</strong> Add monitoring and caching to existing application
+            </div>
+        </div>
+
+        <h2>🎤 Common Interview Questions</h2>
+        
+        <div class="annotation">
+            <h3>Conceptual Questions</h3>
+            <ul>
+                <li>What is the difference between Spring and Spring Boot?</li>
+                <li>Explain dependency injection and its types</li>
+                <li>What is auto-configuration in Spring Boot?</li>
+                <li>Difference between @Component, @Service, @Repository, @Controller</li>
+                <li>How does Spring Boot resolve conflicts between dependencies?</li>
+                <li>Explain Spring Bean lifecycle</li>
+                <li>What is the purpose of @Transactional?</li>
+                <li>How does Spring Security work?</li>
+            </ul>
+        </div>
+
+        <div class="annotation">
+            <h3>Scenario-Based Questions</h3>
+            <ul>
+                <li>How would you optimize a slow API endpoint?</li>
+                <li>Design a rate-limiting mechanism</li>
+                <li>Handle concurrent updates to the same entity</li>
+                <li>Implement API versioning strategy</li>
+                <li>Debug N+1 query problems</li>
+                <li>Implement idempotent API operations</li>
+                <li>Handle large file uploads/downloads</li>
+            </ul>
+        </div>
+
+        <h2>📖 Recommended Resources</h2>
+        <ul>
+            <li><strong>Books:</strong>
+                <ul>
+                    <li>"Spring in Action" by Craig Walls</li>
+                    <li>"Spring Boot in Practice" by Somnath Musib</li>
+                    <li>"Cloud Native Java" by Josh Long</li>
+                </ul>
+            </li>
+            <li><strong>Online:</strong>
+                <ul>
+                    <li>Official Spring Documentation (spring.io)</li>
+                    <li>Baeldung tutorials</li>
+                    <li>Spring Boot guides on spring.io</li>
+                    <li>YouTube: Java Brains, Dan Vega</li>
+                </ul>
+            </li>
+            <li><strong>Practice:</strong>
+                <ul>
+                    <li>Build a complete e-commerce backend</li>
+                    <li>Create a blog application with authentication</li>
+                    <li>Implement a task management system</li>
+                </ul>
+            </li>
+        </ul>
+
+        <div class="important">
+            <strong>✅ Ready for Interview When You Can:</strong>
+            <ul>
+                <li>Build a full CRUD REST API from scratch</li>
+                <li>Implement JWT authentication and authorization</li>
+                <li>Write comprehensive unit and integration tests</li>
+                <li>Explain Spring Boot internals and auto-configuration</li>
+                <li>Design and discuss microservices architecture</li>
+                <li>Optimize application performance and troubleshoot issues</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

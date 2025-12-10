@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PostgreSQL Interview Preparation Plan</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #336699 0%, #5588bb 100%);
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #336699;
+            text-align: center;
+            border-bottom: 3px solid #336699;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #5588bb;
+            color: #336699;
+            margin-top: 30px;
+            border-left: 4px solid #336699;
+            padding-left: 10px;
+        }
+        h3 {
+            color: #555;
+            margin-top: 20px;
+        }
+        ul {
+            margin: 10px 0;
+        }
+        li {
+            margin: 8px 0;
+            line-height: 1.8;
+        }
+        .week {
+            background: #f8f9fa;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+            border-left: 4px solid #336699;
+        }
+        .important {
+            background: #e3f2fd;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 15px 0;
+            border-left: 4px solid #2196f3;
+        }
+        .sql-example {
+            background: #f5f5f5;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+            font-family: 'Courier New', monospace;
+            border-left: 3px solid #336699;
+        }
+        .performance-tip {
+            background: #fff3e0;
+            padding: 8px;
+            border-radius: 4px;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🐘 PostgreSQL Interview Preparation Plan</h1>
+        
+        <div class="important">
+            <strong>📌 Goal:</strong> Master PostgreSQL database management and optimization<br>
+            <strong>⏱️ Duration:</strong> 6-8 weeks<br>
+            <strong>📊 Daily Time:</strong> 1.5-2 hours
+        </div>
+
+        <h2>🎯 Phase 1: SQL Fundamentals (Weeks 1-2)</h2>
+        
+        <div class="week">
+            <h3>Week 1: Basic SQL & DDL</h3>
+            <ul>
+                <li><strong>Database Basics:</strong>
+                    <ul>
+                        <li>RDBMS concepts and ACID properties</li>
+                        <li>PostgreSQL architecture overview</li>
+                        <li>Installation and psql command-line basics</li>
+                        <li>Databases, schemas, and tables</li>
+                    </ul>
+                </li>
+                <li><strong>Data Types:</strong>
+                    <ul>
+                        <li>Numeric (INTEGER, BIGINT, DECIMAL, NUMERIC)</li>
+                        <li>Character (VARCHAR, TEXT, CHAR)</li>
+                        <li>Date/Time (DATE, TIME, TIMESTAMP, INTERVAL)</li>
+                        <li>Boolean, UUID</li>
+                        <li>JSON/JSONB</li>
+                        <li>Arrays and custom types</li>
+                    </ul>
+                </li>
+                <li><strong>DDL Operations:</strong>
+                    <ul>
+                        <li>CREATE DATABASE, CREATE SCHEMA</li>
+                        <li>CREATE TABLE with constraints</li>
+                        <li>ALTER TABLE (add/drop columns, modify)</li>
+                        <li>DROP, TRUNCATE vs DELETE</li>
+                        <li>Comments on tables and columns</li>
+                    </ul>
+                </li>
+                <li><strong>Constraints:</strong>
+                    <ul>
+                        <li>PRIMARY KEY, FOREIGN KEY</li>
+                        <li>UNIQUE, NOT NULL</li>
+                        <li>CHECK constraints</li>
+                        <li>DEFAULT values</li>
+                        <li>Composite keys</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="sql-example">
+                <strong>Practice:</strong> Create database schema for e-commerce system
+            </div>
+        </div>
+
+        <div class="week">
+            <h3>Week 2: DML & Basic Queries</h3>
+            <ul>
+                <li><strong>CRUD Operations:</strong>
+                    <ul>
+                        <li>INSERT (single, multiple rows, from SELECT)</li>
+                        <li>SELECT with WHERE, ORDER BY, LIMIT, OFFSET</li>
+                        <li>UPDATE with conditions</li>
+                        <li>DELETE with WHERE clause</li>
+                        <li>RETURNING clause</li>
+                    </ul>
+                </li>
+                <li><strong>Filtering & Sorting:</strong>
+                    <ul>
+                        <li>WHERE clause operators (=, !=, >, <, BETWEEN)</li>
+                        <li>IN, NOT IN</li>
+                        <li>LIKE, ILIKE pattern matching</li>
+                        <li>IS NULL, IS NOT NULL</li>
+                        <li>ORDER BY (ASC, DESC, NULLS FIRST/LAST)</li>
+                    </ul>
+                </li>
+                <li><strong>Aggregate Functions:</strong>
+                    <ul>
+                        <li>COUNT, SUM, AVG, MIN, MAX</li>
+                        <li>GROUP BY clause</li>
+                        <li>HAVING clause (filtering groups)</li>
+                        <li>DISTINCT and COUNT DISTINCT</li>
+                    </ul>
+                </li>
+                <li><strong>String Functions:</strong>
+                    <ul>
+                        <li>CONCAT, LENGTH, UPPER, LOWER</li>
+                        <li>SUBSTRING, POSITION, TRIM</li>
+                        <li>REPLACE, SPLIT_PART</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="sql-example">
+                <strong>Practice:</strong> Write 50+ queries covering all basic operations
+            </div>
+        </div>
+
+        <h2>🔗 Phase 2: Advanced Queries (Weeks 3-4)</h2>
+        
+        <div class="week">
+            <h3>Week 3: Joins & Subqueries</h3>
+            <ul>
+                <li><strong>Joins:</strong>
+                    <ul>
+                        <li>INNER JOIN</li>
+                        <li>LEFT JOIN (LEFT OUTER JOIN)</li>
+                        <li>RIGHT JOIN (RIGHT OUTER JOIN)</li>
+                        <li>FULL OUTER JOIN</li>
+                        <li>CROSS JOIN</li>
+                        <li>SELF JOIN</li>
+                        <li>Natural joins and using clause</li>
+                        <li>Multiple table joins</li>
+                    </ul>
+                </li>
+                <li><strong>Subqueries:</strong>
+                    <ul>
+                        <li>Scalar subqueries</li>
+                        <li>Row subqueries</li>
+                        <li>Table subqueries</li>
+                        <li>Correlated subqueries</li>
+                        <li>EXISTS, NOT EXISTS</li>
+                        <li>IN with subqueries</li>
+                        <li>ANY, ALL operators</li>
+                    </ul>
+                </li>
+                <li><strong>Set Operations:</strong>
+                    <ul>
+                        <li>UNION, UNION ALL</li>
+                        <li>INTERSECT</li>
+                        <li>EXCEPT</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="sql-example">
+                <strong>Practice:</strong> Complex multi-table queries with various join types
+            </div>
+        </div>
+
+        <div class="week">
+            <h3>Week 4: Window Functions & CTEs</h3>
+            <ul>
+                <li><strong>Window Functions:</strong>
+                    <ul>
+                        <li>ROW_NUMBER(), RANK(), DENSE_RANK()</li>
+                        <li>NTILE(), PERCENT_RANK()</li>
+                        <li>LAG(), LEAD()</li>
+                        <li>FIRST_VALUE(), LAST_VALUE()</li>
+                        <li>PARTITION BY clause</li>
+                        <li>ORDER BY in window functions</li>
+                        <li>Aggregate functions as window functions</li>
+                    </ul>
+                </li>
+                <li><strong>Common Table Expressions (CTEs):</strong>
+                    <ul>
+                        <li>WITH clause basics</li>
+                        <li>Multiple CTEs</li>
+                        <li>Recursive CTEs</li>
+                        <li>CTE vs subqueries - when to use</li>
+                    </ul>
+                </li>
+                <li><strong>Advanced Functions:</strong>
+                    <ul>
+                        <li>CASE WHEN expressions</li>
+                        <li>COALESCE, NULLIF</li>
+                        <li>CAST and type conversion</li>
+                        <li>Date/time functions (NOW, EXTRACT, DATE_TRUNC)</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="sql-example">
+                <strong>Practice:</strong> Window functions for ranking and running totals
+            </div>
+        </div>
+
+        <h2>🏗️ Phase 3: Database Design & Indexing (Week 5)</h2>
+        
+        <div class="week">
+            <h3>Database Design & Optimization</h3>
+            <ul>
+                <li><strong>Database Design:</strong>
+                    <ul>
+                        <li>Normalization (1NF, 2NF, 3NF, BCNF)</li>
+                        <li>Denormalization strategies</li>
+                        <li>ER diagrams and entity relationships</li>
+                        <li>Schema design best practices</li>
+                    </ul>
+                </li>
+                <li><strong>Indexes:</strong>
+                    <ul>
+                        <li>B-tree indexes (default)</li>
+                        <li>Hash indexes</li>
+                        <li>GiST and GIN indexes</li>
+                        <li>Partial indexes</li>
+                        <li>Multi-column indexes</li>
+                        <li>Index creation: CREATE INDEX, CREATE UNIQUE INDEX</li>
+                        <li>When to use indexes</li>
+                        <li>Index maintenance and REINDEX</li>
+                    </ul>
+                </li>
+                <li><strong>Query Performance:</strong>
+                    <ul>
+                        <li>EXPLAIN and EXPLAIN ANALYZE</li>
+                        <li>Reading query plans</li>
+                        <li>Sequential scan vs index scan</li>
+                        <li>Identifying slow queries</li>
+                        <li>Query optimization techniques</li>
+                    </ul>
+                </li>
+                <li><strong>Views & Materialized Views:</strong>
+                    <ul>
+                        <li>CREATE VIEW</li>
+                        <li>Updatable views</li>
+                        <li>Materialized views (CREATE MATERIALIZED VIEW)</li>
+                        <li>REFRESH MATERIALIZED VIEW</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="performance-tip">
+                <strong>Practice:</strong> Analyze and optimize slow queries using EXPLAIN
+            </div>
+        </div>
+
+        <h2>🔐 Phase 4: Advanced Features (Week 6)</h2>
+        
+        <div class="week">
+            <h3>Transactions, Locks & Advanced Topics</h3>
+            <ul>
+                <li><strong>Transactions:</strong>
+                    <ul>
+                        <li>BEGIN, COMMIT, ROLLBACK</li>
+                        <li>SAVEPOINT and partial rollbacks</li>
+                        <li>Transaction isolation levels (Read Uncommitted, Read Committed, Repeatable Read, Serializable)</li>
+                        <li>ACID properties in practice</li>
+                        <li>Deadlocks and how to avoid them</li>
+                    </ul>
+                </li>
+                <li><strong>Concurrency Control:</strong>
+                    <ul>
+                        <li>MVCC (Multi-Version Concurrency Control)</li>
+                        <li>Explicit locking (SELECT FOR UPDATE, FOR SHARE)</li>
+                        <li>Advisory locks</li>
+                        <li>Lock types (row-level, table-level)</li>
+                    </ul>
+                </li>
+                <li><strong>Stored Procedures & Functions:</strong>
+                    <ul>
+                        <li>CREATE FUNCTION (PL/pgSQL)</li>
+                        <li>Function parameters (IN, OUT, INOUT)</li>
+                        <li>RETURNS TABLE</li>
+                        <li>Stored procedures (CREATE PROCEDURE)</li>
+                        <li>Control structures (IF, CASE, LOOP, WHILE)</li>
+                        <li>Exception handling</li>
+                    </ul>
+                </li>
+                <li><strong>Triggers:</strong>
+                    <ul>
+                        <li>BEFORE, AFTER, INSTEAD OF triggers</li>
+                        <li>Row-level vs statement-level triggers</li>
+                        <li>Trigger functions</li>
+                        <li>Use cases: audit logging, validation</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="sql-example">
+                <strong>Practice:</strong> Create audit system using triggers
+            </div>
+        </div>
+
+        <h2>📊 Phase 5: Administration & Performance (Week 7)</h2>
+        
+        <div class="week">
+            <h3>Database Administration</h3>
+            <ul>
+                <li><strong>User Management & Security:</strong>
+                    <ul>
+                        <li>CREATE USER, ALTER USER, DROP USER</li>
+                        <li>CREATE ROLE, GRANT, REVOKE</li>
+                        <li>Row-level security (RLS)</li>
+                        <li>pg_hba.conf configuration</li>
+                        <li>SSL connections</li>
+                    </ul>
+                </li>
+                <li><strong>Backup & Recovery:</strong>
+                    <ul>
+                        <li>pg_dump, pg_dumpall</li>
+                        <li>pg_restore</li>
+                        <li>Logical vs physical backups</li>
+                        <li>Point-in-time recovery (PITR)</li>
+                        <li>WAL (Write-Ahead Logging)</li>
+                    </ul>
+                </li>
+                <li><strong>Performance Tuning:</strong>
+                    <ul>
+                        <li>postgresql.conf settings (shared_buffers, work_mem, etc.)</li>
+                        <li>Connection pooling (PgBouncer)</li>
+                        <li>VACUUM, ANALYZE, VACUUM FULL</li>
+                        <li>Monitoring queries (pg_stat_activity)</li>
+                        <li>Table and index bloat</li>
+                    </ul>
+                </li>
+                <li><strong>Replication:</strong>
+                    <ul>
+                        <li>Streaming replication</li>
+                        <li>Logical replication</li>
+                        <li>Read replicas</li>
+                        <li>High availability concepts</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <h2>🚀 Phase 6: PostgreSQL-Specific Features (Week 8)</h2>
+        
+        <div class="week">
+            <h3>Advanced PostgreSQL Features</h3>
+            <ul>
+                <li><strong>JSON/JSONB:</strong>
+                    <ul>
+                        <li>Storing JSON data (JSON vs JSONB)</li>
+                        <li>JSON operators (->, ->>, #>, #>>)</li>
+                        <li>JSON functions (jsonb_build_object, jsonb_agg)</li>
+                        <li>Indexing JSONB (GIN indexes)</li>
+                        <li>Querying JSON data</li>
+                    </ul>
+                </li>
+                <li><strong>Full-Text Search:</strong>
+                    <ul>
+                        <li>tsvector and tsquery</li>
+                        <li>to_tsvector, to_tsquery</li>
+                        <li>GIN indexes for text search</li>
+                        <li>Ranking search results</li>
+                    </ul>
+                </li>
+                <li><strong>Array Operations:</strong>
+                    <ul>
+                        <li>Array data types</li>
+                        <li>Array functions (array_agg, unnest)</li>
+                        <li>Array operators (@>, <@, &&)</li>
+                    </ul>
+                </li>
+                <li><strong>Extensions:</strong>
+                    <ul>
+                        <li>PostGIS (geographic data)</li>
+                        <li>pg_trgm (fuzzy string matching)</li>
+                        <li>hstore (key-value pairs)</li>
+                        <li>uuid-ossp (UUID generation)</li>
+                    </ul>
+                </li>
+                <li><strong>Partitioning:</strong>
+                    <ul>
+                        <li>Range partitioning</li>
+                        <li>List partitioning</li>
+                        <li>Hash partitioning</li>
+                        <li>Partition pruning</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="sql-example">
+                <strong>Practice:</strong> Build application using JSONB for flexible schema
+            </div>
+        </div>
+
+        <h2>🎤 Common Interview Questions</h2>
+        
+        <div class="important">
+            <h3>Conceptual Questions</h3>
+            <ul>
+                <li>What is ACID and why is it important?</li>
+                <li>Explain different types of indexes in PostgreSQL</li>
+                <li>What is MVCC and how does PostgreSQL implement it?</li>
+                <li>Difference between DELETE, TRUNCATE, and DROP</li>
+                <li>What are transaction isolation levels? Explain each</li>
+                <li>Difference between WHERE and HAVING</li>
+                <li>Explain INNER JOIN vs LEFT JOIN with examples</li>
+                <li>What is the N+1 query problem?</li>
+                <li>Difference between UNION and UNION ALL</li>
+                <li>What is query planning and execution?</li>
+            </ul>
+        </div>
+
+        <div class="important">
+            <h3>Performance & Optimization</h3>
+            <ul>
+                <li>How do you identify slow queries?</li>
+                <li>Explain EXPLAIN ANALYZE output</li>
+                <li>When should you add an index? When shouldn't you?</li>
+                <li>What is VACUUM and why is it important?</li>
+                <li>How to optimize a query that's doing a sequential scan?</li>
+                <li>Difference between materialized view and regular view</li>
+                <li>How would you handle deadlocks?</li>
+                <li>What is connection pooling and why use it?</li>
+            </ul>
+        </div>
+
+        <div class="important">
+            <h3>SQL Query Challenges</h3>
+            <ul>
+                <li>Find Nth highest salary</li>
+                <li>Find duplicate records</li>
+                <li>Calculate running totals</li>
+                <li>Find gaps in sequential data</li>
+                <li>Hierarchical queries (employee-manager relationships)</li>
+                <li>Pivot data (rows to columns)</li>
+                <li>Find second most recent record per group</li>
+                <li>Calculate moving averages</li>
+            </ul>
+        </div>
+
+        <h2>📖 Recommended Resources</h2>
+        <ul>
+            <li><strong>Official Documentation:</strong>
+                <ul>
+                    <li>PostgreSQL Official Documentation (postgresql.org)</li>
+                    <li>PostgreSQL Wiki</li>
+                </ul>
+            </li>
+            <li><strong>Books:</strong>
+                <ul>
+                    <li>"PostgreSQL: Up and Running" by Regina Obe</li>
+                    <li>"The Art of PostgreSQL" by Dimitri Fontaine</li>
+                    <li>"PostgreSQL High Performance" by Gregory Smith</li>
+                </ul>
+            </li>
+            <li><strong>Online Platforms:</strong>
+                <ul>
+                    <li>LeetCode Database problems</li>
+                    <li>HackerRank SQL challenges</li>
+                    <li>SQL Zoo</li>
+                    <li>Mode Analytics SQL Tutorial</li>
+                </ul>
+            </li>
+            <li><strong>Practice:</strong>
+                <ul>
+                    <li>Set up local PostgreSQL instance</li>
+                    <li>Work with sample databases (Pagila, dvdrental)</li>
+                    <li>Solve 100+ SQL problems</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>💡 Best Practices</h2>
+        <ul>
+            <li>Always use parameterized queries to prevent SQL injection</li>
+            <li>Index foreign keys and frequently queried columns</li>
+            <li>Use appropriate data types (avoid TEXT for everything)</li>
+            <li>Implement proper transaction boundaries</li>
+            <li>Regular VACUUM and ANALYZE maintenance</li>
+            <li>Monitor query performance with pg_stat_statements</li>
+            <li>Use connection pooling for web applications</li>
+            <li>Implement proper backup and recovery strategies</li>
+            <li>Follow naming conventions (snake_case for PostgreSQL)</li>
+            <li>Use constraints to enforce data integrity</li>
+            <li>Avoid SELECT * in production code</li>
+            <li>Use CTEs for complex queries readability</li>
+        </ul>
+
+        <div class="important">
+            <strong>✅ Interview Ready Checklist:</strong>
+            <ul>
+                <li>Write complex joins and subqueries confidently</li>
+                <li>Understand and explain EXPLAIN ANALYZE output</li>
+                <li>Know when and how to create indexes</li>
+                <li>Design normalized database schemas</li>
+                <li>Understand transaction isolation levels</li>
+                <li>Use window functions effectively</li>
+                <li>Optimize slow queries</li>
+                <li>Write and debug stored procedures</li>
+                <li>Solve 50+ LeetCode database problems</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

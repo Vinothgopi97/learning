@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning & Interview Preparation Plans</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 50px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .subtitle {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+
+        .topics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .topic-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .topic-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .topic-header {
+            padding: 25px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .topic-header h2 {
+            font-size: 1.5em;
+            margin-bottom: 5px;
+        }
+
+        .topic-description {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+
+        .topic-content {
+            padding: 25px;
+        }
+
+        .topic-link {
+            display: inline-block;
+            width: 100%;
+            padding: 12px 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            transition: opacity 0.3s ease;
+            font-weight: 600;
+        }
+
+        .topic-link:hover {
+            opacity: 0.9;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .stat-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            color: white;
+        }
+
+        .stat-number {
+            font-size: 2em;
+            font-weight: bold;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+
+        footer {
+            text-align: center;
+            color: white;
+            margin-top: 40px;
+            opacity: 0.8;
+            font-size: 0.9em;
+        }
+
+        .icon {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📚 Learning & Interview Preparation</h1>
+            <p class="subtitle">Comprehensive study guides for technical interviews and professional development</p>
+        </header>
+
+        <div class="topics-grid">
+            <!-- Algorithms & Data Structures -->
+            <div class="topic-card">
+                <div class="topic-header">
+                    <div class="icon">🔢</div>
+                    <h2>Algorithms & Data Structures</h2>
+                    <p class="topic-description">Master core algorithmic concepts</p>
+                </div>
+                <div class="topic-content">
+                    <p style="color: #666; margin-bottom: 15px; font-size: 0.9em;">Essential algorithms, sorting techniques, searching strategies, and data structure implementations</p>
+                    <a href="algorithms-datastructures-plan.html" class="topic-link">View Plan →</a>
+                </div>
+            </div>
+
+            <!-- Java Spring Boot -->
+            <div class="topic-card">
+                <div class="topic-header">
+                    <div class="icon">☕</div>
+                    <h2>Java Spring Boot</h2>
+                    <p class="topic-description">Build robust backend applications</p>
+                </div>
+                <div class="topic-content">
+                    <p style="color: #666; margin-bottom: 15px; font-size: 0.9em;">Spring Boot framework, dependency injection, REST APIs, and enterprise patterns</p>
+                    <a href="spring-boot-plan.html" class="topic-link">View Plan →</a>
+                </div>
+            </div>
+
+            <!-- Angular -->
+            <div class="topic-card">
+                <div class="topic-header">
+                    <div class="icon">🅰️</div>
+                    <h2>Angular</h2>
+                    <p class="topic-description">Create dynamic frontend applications</p>
+                </div>
+                <div class="topic-content">
+                    <p style="color: #666; margin-bottom: 15px; font-size: 0.9em;">Components, services, routing, RxJS, and advanced Angular patterns</p>
+                    <a href="angular-plan.html" class="topic-link">View Plan →</a>
+                </div>
+            </div>
+
+            <!-- PostgreSQL -->
+            <div class="topic-card">
+                <div class="topic-header">
+                    <div class="icon">🗄️</div>
+                    <h2>PostgreSQL</h2>
+                    <p class="topic-description">Master relational databases</p>
+                </div>
+                <div class="topic-content">
+                    <p style="color: #666; margin-bottom: 15px; font-size: 0.9em;">SQL queries, indexing, transactions, and database optimization</p>
+                    <a href="postgresql-plan.html" class="topic-link">View Plan →</a>
+                </div>
+            </div>
+
+            <!-- AWS -->
+            <div class="topic-card">
+                <div class="topic-header">
+                    <div class="icon">☁️</div>
+                    <h2>AWS</h2>
+                    <p class="topic-description">Cloud infrastructure & services</p>
+                </div>
+                <div class="topic-content">
+                    <p style="color: #666; margin-bottom: 15px; font-size: 0.9em;">EC2, S3, RDS, Lambda, and cloud architecture patterns</p>
+                    <a href="aws-plan.html" class="topic-link">View Plan →</a>
+                </div>
+            </div>
+
+            <!-- Docker -->
+            <div class="topic-card">
+                <div class="topic-header">
+                    <div class="icon">🐳</div>
+                    <h2>Docker</h2>
+                    <p class="topic-description">Containerization & deployment</p>
+                </div>
+                <div class="topic-content">
+                    <p style="color: #666; margin-bottom: 15px; font-size: 0.9em;">Container orchestration, Docker Compose, and microservices</p>
+                    <a href="docker-plan.html" class="topic-link">View Plan →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="stats">
+            <div class="stat-item">
+                <span class="stat-number">6</span>
+                <span class="stat-label">Core Topics</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">100+</span>
+                <span class="stat-label">Concepts Covered</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">∞</span>
+                <span class="stat-label">Learning Path</span>
+            </div>
+        </div>
+
+        <footer>
+            <p>💡 Created for comprehensive interview preparation and professional development</p>
+            <p style="margin-top: 10px;">Last updated: December 2025</p>
+        </footer>
+    </div>
+</body>
+</html>

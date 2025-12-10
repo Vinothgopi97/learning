@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angular Interview Preparation Plan</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #dd2476 0%, #ff512f 100%);
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #dd2476;
+            text-align: center;
+            border-bottom: 3px solid #dd2476;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #ff512f;
+            color: #dd2476;
+            margin-top: 30px;
+            border-left: 4px solid #dd2476;
+            padding-left: 10px;
+        }
+        h3 {
+            color: #555;
+            margin-top: 20px;
+        }
+        ul {
+            margin: 10px 0;
+        }
+        li {
+            margin: 8px 0;
+            line-height: 1.8;
+        }
+        .week {
+            background: #f8f9fa;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+            border-left: 4px solid #dd2476;
+        }
+        .important {
+            background: #ffe5e5;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 15px 0;
+            border-left: 4px solid #dd2476;
+        }
+        .code-topic {
+            background: #fff0f0;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        .version-note {
+            background: #e8f4f8;
+            padding: 8px;
+            border-radius: 4px;
+            margin: 5px 0;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🅰️ Angular Interview Preparation Plan</h1>
+        
+        <div class="important">
+            <strong>📌 Goal:</strong> Master Angular framework for modern web application development<br>
+            <strong>⏱️ Duration:</strong> 6-8 weeks<br>
+            <strong>📊 Daily Time:</strong> 2-3 hours
+        </div>
+
+        <div class="version-note">
+            <strong>📝 Note:</strong> This plan covers Angular 15+ (latest versions). Core concepts remain consistent across versions.
+        </div>
+
+        <h2>🎯 Phase 1: Foundations (Weeks 1-2)</h2>
+        
+        <div class="week">
+            <h3>Week 1: TypeScript & Angular Basics</h3>
+            <ul>
+                <li><strong>TypeScript Essentials:</strong>
+                    <ul>
+                        <li>Types, Interfaces, Classes</li>
+                        <li>Generics, Decorators</li>
+                        <li>Access modifiers (public, private, protected)</li>
+                        <li>Type assertions and type guards</li>
+                        <li>Async/Await, Promises</li>
+                    </ul>
+                </li>
+                <li><strong>Angular Introduction:</strong>
+                    <ul>
+                        <li>What is Angular and why use it?</li>
+                        <li>Angular CLI basics (ng new, ng serve, ng generate)</li>
+                        <li>Project structure understanding</li>
+                        <li>Angular architecture overview</li>
+                    </ul>
+                </li>
+                <li><strong>Components:</strong>
+                    <ul>
+                        <li>Component creation and structure</li>
+                        <li>@Component decorator</li>
+                        <li>Component lifecycle hooks (ngOnInit, ngOnDestroy, etc.)</li>
+                        <li>Template syntax and interpolation</li>
+                        <li>Property binding, event binding</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="code-topic">
+                <strong>Practice:</strong> Create multiple components with different bindings
+            </div>
+        </div>
+
+        <div class="week">
+            <h3>Week 2: Templates & Directives</h3>
+            <ul>
+                <li><strong>Data Binding:</strong>
+                    <ul>
+                        <li>Interpolation {{ }}</li>
+                        <li>Property binding [property]</li>
+                        <li>Event binding (event)</li>
+                        <li>Two-way binding [(ngModel)]</li>
+                    </ul>
+                </li>
+                <li><strong>Built-in Directives:</strong>
+                    <ul>
+                        <li>Structural: *ngIf, *ngFor, *ngSwitch</li>
+                        <li>Attribute: ngClass, ngStyle, ngModel</li>
+                        <li>ng-template, ng-container</li>
+                    </ul>
+                </li>
+                <li><strong>Custom Directives:</strong>
+                    <ul>
+                        <li>Attribute directives</li>
+                        <li>Structural directives</li>
+                        <li>@Directive decorator</li>
+                        <li>HostListener, HostBinding</li>
+                    </ul>
+                </li>
+                <li><strong>Pipes:</strong>
+                    <ul>
+                        <li>Built-in pipes (date, uppercase, currency, etc.)</li>
+                        <li>Custom pipes creation</li>
+                        <li>Pure vs Impure pipes</li>
+                        <li>Async pipe</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="code-topic">
+                <strong>Practice:</strong> Build a todo list with custom directives and pipes
+            </div>
+        </div>
+
+        <h2>📦 Phase 2: Component Communication & Services (Week 3)</h2>
+        
+        <div class="week">
+            <h3>Component Interaction</h3>
+            <ul>
+                <li><strong>Input & Output:</strong>
+                    <ul>
+                        <li>@Input() for parent-to-child communication</li>
+                        <li>@Output() and EventEmitter for child-to-parent</li>
+                        <li>Input setters and getters</li>
+                        <li>OnChanges lifecycle hook</li>
+                    </ul>
+                </li>
+                <li><strong>ViewChild & ContentChild:</strong>
+                    <ul>
+                        <li>@ViewChild, @ViewChildren</li>
+                        <li>@ContentChild, @ContentChildren</li>
+                        <li>Template reference variables</li>
+                    </ul>
+                </li>
+                <li><strong>Services & Dependency Injection:</strong>
+                    <ul>
+                        <li>Creating services with @Injectable</li>
+                        <li>Service injection (constructor injection)</li>
+                        <li>providedIn: 'root' vs providers array</li>
+                        <li>Hierarchical dependency injection</li>
+                        <li>Service scopes</li>
+                    </ul>
+                </li>
+                <li><strong>Component Communication Patterns:</strong>
+                    <ul>
+                        <li>Service-based communication</li>
+                        <li>Subject and BehaviorSubject</li>
+                        <li>State management basics</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="code-topic">
+                <strong>Practice:</strong> Build parent-child-sibling component communication
+            </div>
+        </div>
+
+        <h2>🔄 Phase 3: RxJS & Reactive Programming (Week 4)</h2>
+        
+        <div class="week">
+            <h3>RxJS Fundamentals</h3>
+            <ul>
+                <li><strong>Observable Basics:</strong>
+                    <ul>
+                        <li>Observable, Observer, Subscription</li>
+                        <li>Creating observables (of, from, interval)</li>
+                        <li>Hot vs Cold observables</li>
+                        <li>Unsubscribing and memory leaks</li>
+                    </ul>
+                </li>
+                <li><strong>Subjects:</strong>
+                    <ul>
+                        <li>Subject, BehaviorSubject, ReplaySubject</li>
+                        <li>AsyncSubject</li>
+                        <li>When to use each type</li>
+                    </ul>
+                </li>
+                <li><strong>Common Operators:</strong>
+                    <ul>
+                        <li>Transformation: map, pluck, switchMap, mergeMap, concatMap</li>
+                        <li>Filtering: filter, debounceTime, distinctUntilChanged</li>
+                        <li>Combination: combineLatest, forkJoin, merge</li>
+                        <li>Error handling: catchError, retry</li>
+                        <li>Utility: tap, takeUntil, take, first</li>
+                    </ul>
+                </li>
+                <li><strong>Best Practices:</strong>
+                    <ul>
+                        <li>Avoiding memory leaks (takeUntil pattern)</li>
+                        <li>Async pipe for automatic subscription</li>
+                        <li>Error handling strategies</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="code-topic">
+                <strong>Practice:</strong> Build search functionality with debounce and switchMap
+            </div>
+        </div>
+
+        <h2>🌐 Phase 4: HTTP & Routing (Week 5)</h2>
+        
+        <div class="week">
+            <h3>HTTP Client & Routing</h3>
+            <ul>
+                <li><strong>HttpClient:</strong>
+                    <ul>
+                        <li>GET, POST, PUT, DELETE requests</li>
+                        <li>HttpHeaders, HttpParams</li>
+                        <li>Interceptors for auth, logging, errors</li>
+                        <li>Error handling with catchError</li>
+                        <li>Loading indicators</li>
+                    </ul>
+                </li>
+                <li><strong>Routing Basics:</strong>
+                    <ul>
+                        <li>RouterModule configuration</li>
+                        <li>Routes array definition</li>
+                        <li>RouterLink, RouterLinkActive</li>
+                        <li>Router outlet</li>
+                        <li>Programmatic navigation</li>
+                    </ul>
+                </li>
+                <li><strong>Advanced Routing:</strong>
+                    <ul>
+                        <li>Route parameters (paramMap)</li>
+                        <li>Query parameters (queryParamMap)</li>
+                        <li>Child routes and nested routing</li>
+                        <li>Lazy loading modules</li>
+                        <li>Route guards (CanActivate, CanDeactivate, Resolve)</li>
+                        <li>Preloading strategies</li>
+                    </ul>
+                </li>
+                <li><strong>Navigation:</strong>
+                    <ul>
+                        <li>Router service methods</li>
+                        <li>NavigationExtras</li>
+                        <li>Router events</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="code-topic">
+                <strong>Practice:</strong> Build multi-page app with auth guards and lazy loading
+            </div>
+        </div>
+
+        <h2>📝 Phase 5: Forms & Validation (Week 6)</h2>
+        
+        <div class="week">
+            <h3>Forms Management</h3>
+            <ul>
+                <li><strong>Template-Driven Forms:</strong>
+                    <ul>
+                        <li>FormsModule</li>
+                        <li>ngModel, ngForm</li>
+                        <li>Template reference variables</li>
+                        <li>Validation (required, minlength, pattern, etc.)</li>
+                        <li>Form states (valid, invalid, touched, dirty)</li>
+                    </ul>
+                </li>
+                <li><strong>Reactive Forms:</strong>
+                    <ul>
+                        <li>ReactiveFormsModule</li>
+                        <li>FormControl, FormGroup, FormArray</li>
+                        <li>FormBuilder service</li>
+                        <li>setValue vs patchValue</li>
+                        <li>Dynamic form controls</li>
+                    </ul>
+                </li>
+                <li><strong>Validation:</strong>
+                    <ul>
+                        <li>Built-in validators (Validators class)</li>
+                        <li>Custom validators (sync and async)</li>
+                        <li>Cross-field validation</li>
+                        <li>Error messages display</li>
+                        <li>updateOn strategies (change, blur, submit)</li>
+                    </ul>
+                </li>
+                <li><strong>Best Practices:</strong>
+                    <ul>
+                        <li>When to use template-driven vs reactive</li>
+                        <li>Form state management</li>
+                        <li>Accessibility considerations</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="code-topic">
+                <strong>Practice:</strong> Create complex form with dynamic fields and validation
+            </div>
+        </div>
+
+        <h2>🚀 Phase 6: Advanced Topics (Weeks 7-8)</h2>
+        
+        <div class="week">
+            <h3>Week 7: State Management & Testing</h3>
+            <ul>
+                <li><strong>State Management:</strong>
+                    <ul>
+                        <li>NgRx basics (Store, Actions, Reducers, Effects)</li>
+                        <li>State management patterns</li>
+                        <li>When to use state management</li>
+                        <li>Alternative: Signals (Angular 16+)</li>
+                    </ul>
+                </li>
+                <li><strong>Change Detection:</strong>
+                    <ul>
+                        <li>Default change detection strategy</li>
+                        <li>OnPush strategy for performance</li>
+                        <li>ChangeDetectorRef</li>
+                        <li>Zone.js understanding</li>
+                    </ul>
+                </li>
+                <li><strong>Testing:</strong>
+                    <ul>
+                        <li>Jasmine and Karma basics</li>
+                        <li>TestBed configuration</li>
+                        <li>Component testing</li>
+                        <li>Service testing with mocks</li>
+                        <li>Testing with async operations</li>
+                        <li>E2E testing with Protractor/Cypress</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="code-topic">
+                <strong>Practice:</strong> Write unit tests for components and services
+            </div>
+        </div>
+
+        <div class="week">
+            <h3>Week 8: Performance & Best Practices</h3>
+            <ul>
+                <li><strong>Performance Optimization:</strong>
+                    <ul>
+                        <li>Lazy loading modules</li>
+                        <li>OnPush change detection</li>
+                        <li>TrackBy function in *ngFor</li>
+                        <li>Virtual scrolling (CDK)</li>
+                        <li>Preloading strategies</li>
+                        <li>Bundle size optimization</li>
+                    </ul>
+                </li>
+                <li><strong>Angular Material & CDK:</strong>
+                    <ul>
+                        <li>Material components overview</li>
+                        <li>Theming</li>
+                        <li>CDK utilities (Virtual scroll, Drag & Drop)</li>
+                    </ul>
+                </li>
+                <li><strong>Modern Angular Features:</strong>
+                    <ul>
+                        <li>Standalone components (Angular 14+)</li>
+                        <li>Signals (Angular 16+)</li>
+                        <li>Typed forms (Angular 14+)</li>
+                        <li>inject() function</li>
+                    </ul>
+                </li>
+                <li><strong>Build & Deployment:</strong>
+                    <ul>
+                        <li>Production builds (ng build --prod)</li>
+                        <li>Environment configurations</li>
+                        <li>AOT vs JIT compilation</li>
+                        <li>Tree shaking</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <h2>🎤 Common Interview Questions</h2>
+        
+        <div class="important">
+            <h3>Core Concepts</h3>
+            <ul>
+                <li>What is Angular and how does it differ from AngularJS?</li>
+                <li>Explain Angular's architecture and core building blocks</li>
+                <li>What are decorators in Angular? (@Component, @Injectable, etc.)</li>
+                <li>Lifecycle hooks and their use cases</li>
+                <li>What is dependency injection and how does it work?</li>
+                <li>Difference between constructor and ngOnInit</li>
+                <li>Component communication methods</li>
+            </ul>
+        </div>
+
+        <div class="important">
+            <h3>Advanced Topics</h3>
+            <ul>
+                <li>Change detection strategies (Default vs OnPush)</li>
+                <li>Observable vs Promise - when to use each?</li>
+                <li>What are RxJS operators? Explain map, switchMap, mergeMap</li>
+                <li>Template-driven vs Reactive forms - pros/cons</li>
+                <li>How do HTTP interceptors work?</li>
+                <li>Lazy loading implementation and benefits</li>
+                <li>How would you optimize Angular application performance?</li>
+                <li>Explain AOT compilation advantages</li>
+                <li>What are standalone components?</li>
+                <li>Memory leak prevention strategies</li>
+            </ul>
+        </div>
+
+        <div class="important">
+            <h3>Scenario-Based</h3>
+            <ul>
+                <li>Design a search feature with autocomplete (debounce + API)</li>
+                <li>Implement authentication with JWT tokens</li>
+                <li>Handle global error handling</li>
+                <li>Create a reusable component library</li>
+                <li>Implement role-based access control</li>
+                <li>Build infinite scroll functionality</li>
+                <li>Handle form submission with validation</li>
+            </ul>
+        </div>
+
+        <h2>📖 Recommended Resources</h2>
+        <ul>
+            <li><strong>Official Documentation:</strong>
+                <ul>
+                    <li>Angular.io (official docs - best resource)</li>
+                    <li>RxJS documentation</li>
+                </ul>
+            </li>
+            <li><strong>Books:</strong>
+                <ul>
+                    <li>"Pro Angular" by Adam Freeman</li>
+                    <li>"Angular Development with TypeScript"</li>
+                </ul>
+            </li>
+            <li><strong>Online Courses:</strong>
+                <ul>
+                    <li>Angular University</li>
+                    <li>Maximilian Schwarzmüller (Udemy)</li>
+                    <li>Deborah Kurata courses</li>
+                </ul>
+            </li>
+            <li><strong>Practice Projects:</strong>
+                <ul>
+                    <li>E-commerce frontend</li>
+                    <li>Task management app with CRUD</li>
+                    <li>Social media dashboard</li>
+                    <li>Real-time chat application</li>
+                </ul>
+            </li>
+            <li><strong>YouTube Channels:</strong>
+                <ul>
+                    <li>Angular (official channel)</li>
+                    <li>Fireship</li>
+                    <li>Decoded Frontend</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>💡 Best Practices</h2>
+        <ul>
+            <li>Follow Angular style guide</li>
+            <li>Use OnPush change detection for better performance</li>
+            <li>Unsubscribe from observables to prevent memory leaks</li>
+            <li>Prefer reactive forms for complex scenarios</li>
+            <li>Lazy load feature modules</li>
+            <li>Use track by in *ngFor</li>
+            <li>Implement proper error handling</li>
+            <li>Write testable code with dependency injection</li>
+            <li>Keep components small and focused (SRP)</li>
+            <li>Use async pipe whenever possible</li>
+        </ul>
+
+        <div class="important">
+            <strong>✅ Interview Ready Checklist:</strong>
+            <ul>
+                <li>Build at least 2-3 complete Angular applications</li>
+                <li>Understand component lifecycle thoroughly</li>
+                <li>Master RxJS operators and patterns</li>
+                <li>Implement authentication and routing</li>
+                <li>Know when to use different change detection strategies</li>
+                <li>Write unit tests for components and services</li>
+                <li>Explain performance optimization techniques</li>
+                <li>Comfortable with TypeScript advanced features</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
