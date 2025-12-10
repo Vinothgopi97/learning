@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apache Kafka Interview Preparation Plan</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #f5576c;
+            text-align: center;
+            border-bottom: 3px solid #f5576c;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #f093fb;
+            margin-top: 30px;
+            border-left: 4px solid #f5576c;
+            padding-left: 10px;
+        }
+        h3 {
+            color: #555;
+            margin-top: 20px;
+        }
+        ul {
+            margin: 10px 0;
+        }
+        li {
+            margin: 8px 0;
+            line-height: 1.8;
+        }
+        .week {
+            background: #f8f9fa;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+            border-left: 4px solid #f5576c;
+        }
+        .important {
+            background: #fff3cd;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #ffc107;
+            margin: 20px 0;
+        }
+        a {
+            color: #f5576c;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Apache Kafka Interview Preparation Plan</h1>
+
+        <h2>📋 Introduction</h2>
+        <p>Apache Kafka is a distributed event streaming platform used for building real-time applications. It's essential knowledge for modern backend engineers working with high-throughput, low-latency messaging systems.</p>
+
+        <h2>🎯 Core Concepts to Master</h2>
+        <ul>
+            <li><strong>Kafka Fundamentals:</strong>
+                <ul>
+                    <li>Topics, partitions, and brokers</li>
+                    <li>Producer-Consumer model</li>
+                    <li>Message ordering and delivery guarantees</li>
+                    <li>Replication and durability</li>
+                    <li>Log-based architecture</li>
+                </ul>
+            </li>
+            <li><strong>Kafka Brokers & Clusters:</strong>
+                <ul>
+                    <li>Broker architecture and responsibilities</li>
+                    <li>Cluster setup and configuration</li>
+                    <li>Zookeeper role in Kafka</li>
+                    <li>Leader and replica management</li>
+                    <li>Rack awareness</li>
+                </ul>
+            </li>
+            <li><strong>Producers:</strong>
+                <ul>
+                    <li>Producer configuration and tuning</li>
+                    <li>Partitioning strategies</li>
+                    <li>Acknowledgment levels (acks)</li>
+                    <li>Idempotent producers</li>
+                    <li>Compression and batching</li>
+                </ul>
+            </li>
+            <li><strong>Consumers:</strong>
+                <ul>
+                    <li>Consumer groups and offset management</li>
+                    <li>Rebalancing and assignment strategies</li>
+                    <li>At-least-once and exactly-once semantics</li>
+                    <li>Lag monitoring</li>
+                    <li>Session timeout and heartbeats</li>
+                </ul>
+            </li>
+            <li><strong>Advanced Features:</strong>
+                <ul>
+                    <li>Kafka Streams for stream processing</li>
+                    <li>KSQL for SQL on streams</li>
+                    <li>Connect for integrations</li>
+                    <li>Schema Registry</li>
+                    <li>Security and authentication</li>
+                </ul>
+            </li>
+            <li><strong>Performance & Tuning:</strong>
+                <ul>
+                    <li>Throughput and latency optimization</li>
+                    <li>Broker and consumer tuning</li>
+                    <li>Network and disk configuration</li>
+                    <li>Monitoring and metrics</li>
+                    <li>Bottleneck identification</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>📚 Study Plan (6 Weeks)</h2>
+
+        <div class="week">
+            <h3>Week 1: Fundamentals & Architecture</h3>
+            <ul>
+                <li>Understand Kafka architecture and components</li>
+                <li>Learn about topics, partitions, and replication</li>
+                <li>Study producer-consumer model</li>
+                <li>Understand log-based storage</li>
+                <li>Practice: Install and run Kafka locally</li>
+            </ul>
+        </div>
+
+        <div class="week">
+            <h3>Week 2: Producers & Consumers</h3>
+            <ul>
+                <li>Deep dive into producer APIs and configuration</li>
+                <li>Understand partitioning strategies</li>
+                <li>Learn consumer groups and rebalancing</li>
+                <li>Study offset management</li>
+                <li>Practice: Write producer and consumer applications</li>
+            </ul>
+        </div>
+
+        <div class="week">
+            <h3>Week 3: Kafka Clusters & Operations</h3>
+            <ul>
+                <li>Broker configuration and tuning</li>
+                <li>Cluster setup and scaling</li>
+                <li>Replication and failover mechanisms</li>
+                <li>Monitoring and logging</li>
+                <li>Practice: Set up a Kafka cluster with multiple brokers</li>
+            </ul>
+        </div>
+
+        <div class="week">
+            <h3>Week 4: Reliability & Semantics</h3>
+            <ul>
+                <li>Delivery guarantees (at-most-once, at-least-once, exactly-once)</li>
+                <li>Idempotent producers and transactions</li>
+                <li>Error handling and retry strategies</li>
+                <li>Data durability and reliability</li>
+                <li>Practice: Implement exactly-once processing</li>
+            </ul>
+        </div>
+
+        <div class="week">
+            <h3>Week 5: Stream Processing & Advanced Features</h3>
+            <ul>
+                <li>Kafka Streams framework and topology</li>
+                <li>Stateless and stateful transformations</li>
+                <li>Joins and windowing operations</li>
+                <li>KSQL basics</li>
+                <li>Practice: Build stream processing applications</li>
+            </ul>
+        </div>
+
+        <div class="week">
+            <h3>Week 6: Performance, Security & Real-World Scenarios</h3>
+            <ul>
+                <li>Performance tuning and optimization</li>
+                <li>Security configuration and SSL/TLS</li>
+                <li>Disaster recovery strategies</li>
+                <li>Common interview scenarios</li>
+                <li>Practice: Design and solve real-world Kafka problems</li>
+            </ul>
+        </div>
+
+        <h2>💻 Hands-On Practice</h2>
+        <ul>
+            <li>Build a simple event publishing system</li>
+            <li>Implement a log aggregation solution</li>
+            <li>Create a real-time analytics pipeline</li>
+            <li>Design a distributed order processing system</li>
+            <li>Implement exactly-once processing with transactions</li>
+            <li>Set up monitoring and alerting</li>
+            <li>Handle failure and recovery scenarios</li>
+        </ul>
+
+        <h2>💡 Interview Tips</h2>
+        <ul>
+            <li>Know the difference between queues and pub-sub</li>
+            <li>Understand when to use Kafka vs other solutions</li>
+            <li>Be able to explain replication and failover</li>
+            <li>Know performance optimization techniques</li>
+            <li>Understand delivery guarantees and their trade-offs</li>
+            <li>Have concrete examples of Kafka usage</li>
+            <li>Be familiar with monitoring and operational aspects</li>
+            <li>Know Kafka Streams and stream processing concepts</li>
+        </ul>
+
+        <div class="important">
+            <strong>✅ Interview Ready Checklist:</strong>
+            <ul>
+                <li>Explain Kafka architecture and core concepts</li>
+                <li>Design a topic and partition strategy</li>
+                <li>Implement producer and consumer applications</li>
+                <li>Handle failure scenarios and recovery</li>
+                <li>Optimize performance for high-throughput scenarios</li>
+                <li>Explain exactly-once semantics</li>
+                <li>Understand and use Kafka Streams</li>
+                <li>Monitor and troubleshoot Kafka clusters</li>
+                <li>Design real-time data pipelines</li>
+            </ul>
+        </div>
+
+        <h2>📚 References & Resources</h2>
+        <ul>
+            <li><strong><a href="https://kafka.apache.org/documentation/" target="_blank">Apache Kafka Official Documentation</a></strong> - Complete reference guide</li>
+            <li><strong><a href="https://www.confluent.io/learn/" target="_blank">Confluent Learning Resources</a></strong> - In-depth tutorials and guides</li>
+            <li><strong><a href="https://www.amazon.com/Kafka-Definitive-Real-Time-Data-Applications/dp/1491936169" target="_blank">Kafka: The Definitive Guide</a></strong> - Essential book by Confluent engineers</li>
+            <li><strong><a href="https://www.udemy.com/course/apache-kafka/" target="_blank">Udemy: Apache Kafka Series</a></strong> - Comprehensive practical course</li>
+            <li><strong><a href="https://www.youtube.com/results?search_query=kafka+tutorial" target="_blank">YouTube: Kafka Tutorials</a></strong> - Various tutorials and explanations</li>
+            <li><strong><a href="https://kafka.apache.org/quickstart" target="_blank">Kafka Quick Start Guide</a></strong> - Getting started with Kafka</li>
+            <li><strong><a href="https://www.geeksforgeeks.org/apache-kafka/" target="_blank">GeeksforGeeks Kafka</a></strong> - Tutorials and articles</li>
+            <li><strong><a href="https://github.com/confluentinc/examples" target="_blank">Confluent Examples on GitHub</a></strong> - Real-world examples and use cases</li>
+            <li><strong><a href="https://baeldung.com/apache-kafka" target="_blank">Baeldung Kafka Tutorials</a></strong> - Java-focused practical guides</li>
+            <li><strong><a href="https://docs.confluent.io/platform/current/overview.html" target="_blank">Confluent Platform Documentation</a></strong> - Enterprise Kafka ecosystem</li>
+        </ul>
+    </div>
+</body>
+</html>

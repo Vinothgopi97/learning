@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git & Version Control Interview Preparation Plan</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #f39c12 0%, #e74c3c 100%);
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #e74c3c;
+            text-align: center;
+            border-bottom: 3px solid #e74c3c;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #f39c12;
+            margin-top: 30px;
+            border-left: 4px solid #e74c3c;
+            padding-left: 10px;
+        }
+        h3 {
+            color: #555;
+            margin-top: 20px;
+        }
+        ul {
+            margin: 10px 0;
+        }
+        li {
+            margin: 8px 0;
+            line-height: 1.8;
+        }
+        .week {
+            background: #f8f9fa;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+            border-left: 4px solid #e74c3c;
+        }
+        .important {
+            background: #fff3cd;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #ffc107;
+            margin: 20px 0;
+        }
+        a {
+            color: #e74c3c;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            color: #333;
+        }
+        .command-block {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 12px;
+            border-radius: 5px;
+            margin: 10px 0;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔧 Git & Version Control Interview Preparation Plan</h1>
+
+        <h2>📋 Introduction</h2>
+        <p>Git is an essential skill for every software developer. Understanding version control, branching strategies, and collaboration workflows is crucial for technical interviews and professional development.</p>
+
+        <h2>🎯 Core Concepts to Master</h2>
+        <ul>
+            <li><strong>Git Fundamentals:</strong>
+                <ul>
+                    <li>Repository, commits, and history</li>
+                    <li>Staging area and working directory</li>
+                    <li>File states (modified, staged, committed)</li>
+                    <li>HEAD pointer and branches</li>
+                    <li>Tags and references</li>
+                </ul>
+            </li>
+            <li><strong>Branching & Merging:</strong>
+                <ul>
+                    <li>Creating and switching branches</li>
+                    <li>Merge strategies (fast-forward, recursive, squash)</li>
+                    <li>Merge conflicts and resolution</li>
+                    <li>Branch naming conventions</li>
+                    <li>Rebase vs merge</li>
+                </ul>
+            </li>
+            <li><strong>Remotes & Collaboration:</strong>
+                <ul>
+                    <li>Remote repositories and tracking branches</li>
+                    <li>Push and pull operations</li>
+                    <li>Fetch vs pull</li>
+                    <li>Fork and pull request workflow</li>
+                    <li>Upstream tracking</li>
+                </ul>
+            </li>
+            <li><strong>Advanced Git:</strong>
+                <ul>
+                    <li>Rebase and interactive rebase</li>
+                    <li>Cherry-pick operations</li>
+                    <li>Stash management</li>
+                    <li>Reflog and undoing changes</li>
+                    <li>Hooks and automation</li>
+                </ul>
+            </li>
+            <li><strong>Workflows & Strategies:</strong>
+                <ul>
+                    <li>Git Flow branching model</li>
+                    <li>GitHub Flow</li>
+                    <li>Trunk-based development</li>
+                    <li>Commit message conventions</li>
+                    <li>Release management</li>
+                </ul>
+            </li>
+            <li><strong>Collaboration Practices:</strong>
+                <ul>
+                    <li>Code review processes</li>
+                    <li>Pull request best practices</li>
+                    <li>Issue tracking integration</li>
+                    <li>Team collaboration patterns</li>
+                    <li>Conflict resolution strategies</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>📚 Study Plan (4 Weeks)</h2>
+
+        <div class="week">
+            <h3>Week 1: Git Fundamentals & Basics</h3>
+            <ul>
+                <li>Install and configure Git</li>
+                <li>Understand repository structure and objects</li>
+                <li>Learn basic commands (init, add, commit, status)</li>
+                <li>Understanding the staging area</li>
+                <li>Viewing history and logs</li>
+                <li>Practice: Initialize repos and make commits</li>
+            </ul>
+        </div>
+
+        <div class="week">
+            <h3>Week 2: Branching, Merging & Conflict Resolution</h3>
+            <ul>
+                <li>Create and manage branches</li>
+                <li>Understand different merge strategies</li>
+                <li>Resolve merge conflicts</li>
+                <li>Learn rebase vs merge</li>
+                <li>Interactive rebase for clean history</li>
+                <li>Practice: Create branches and practice merging</li>
+            </ul>
+        </div>
+
+        <div class="week">
+            <h3>Week 3: Remote Repositories & Collaboration</h3>
+            <ul>
+                <li>Understanding remotes and tracking branches</li>
+                <li>Push and pull operations</li>
+                <li>Fork and pull request workflows</li>
+                <li>Fetch vs pull operations</li>
+                <li>Setting up upstream tracking</li>
+                <li>Practice: Clone repos and create pull requests</li>
+            </ul>
+        </div>
+
+        <div class="week">
+            <h3>Week 4: Advanced Workflows & Best Practices</h3>
+            <ul>
+                <li>Git Flow and GitHub Flow models</li>
+                <li>Cherry-pick and advanced operations</li>
+                <li>Stash management</li>
+                <li>Reflog and undoing changes</li>
+                <li>Commit message best practices</li>
+                <li>Practice: Implement Git Flow in a project</li>
+            </ul>
+        </div>
+
+        <h2>💻 Essential Git Commands</h2>
+
+        <h3>Setup & Configuration</h3>
+        <div class="command-block">
+git config --global user.name "Your Name"<br>
+git config --global user.email "your@email.com"<br>
+git config --list
+        </div>
+
+        <h3>Basic Commands</h3>
+        <div class="command-block">
+git init                          # Initialize a repository<br>
+git clone &lt;url&gt;                # Clone a remote repository<br>
+git add &lt;file&gt;                 # Stage changes<br>
+git commit -m "message"          # Commit changes<br>
+git push                         # Push commits to remote<br>
+git pull                         # Fetch and merge from remote
+        </div>
+
+        <h3>Branching Commands</h3>
+        <div class="command-block">
+git branch                       # List branches<br>
+git branch &lt;name&gt;             # Create a branch<br>
+git checkout &lt;branch&gt;         # Switch branch<br>
+git switch &lt;branch&gt;           # Switch branch (newer syntax)<br>
+git merge &lt;branch&gt;            # Merge branch<br>
+git rebase &lt;branch&gt;           # Rebase on branch
+        </div>
+
+        <h3>History & Inspection</h3>
+        <div class="command-block">
+git log                          # View commit history<br>
+git log --oneline               # Condensed history<br>
+git diff                        # View unstaged changes<br>
+git diff --staged               # View staged changes<br>
+git show &lt;commit&gt;             # Show commit details
+        </div>
+
+        <h3>Undoing Changes</h3>
+        <div class="command-block">
+git restore &lt;file&gt;            # Discard changes in file<br>
+git restore --staged &lt;file&gt;   # Unstage file<br>
+git revert &lt;commit&gt;           # Create new commit undoing changes<br>
+git reset --soft HEAD~1         # Undo last commit, keep changes<br>
+git reset --hard &lt;commit&gt;     # Hard reset to commit
+        </div>
+
+        <h2>💡 Interview Tips</h2>
+        <ul>
+            <li>Know the difference between merge and rebase</li>
+            <li>Understand when to use cherry-pick</li>
+            <li>Explain how to resolve merge conflicts</li>
+            <li>Be familiar with multiple branching strategies</li>
+            <li>Know how to undo changes (revert, reset, reflog)</li>
+            <li>Understand pull request workflow</li>
+            <li>Know commit message best practices</li>
+            <li>Be able to explain git internals (objects, refs)</li>
+            <li>Know how to handle sensitive data (git-secrets)</li>
+            <li>Understand team collaboration workflows</li>
+        </ul>
+
+        <div class="important">
+            <strong>✅ Interview Ready Checklist:</strong>
+            <ul>
+                <li>Initialize and configure Git repositories</li>
+                <li>Create, switch, and merge branches</li>
+                <li>Resolve complex merge conflicts</li>
+                <li>Use rebase for clean history</li>
+                <li>Work with remote repositories</li>
+                <li>Implement Git Flow workflow</li>
+                <li>Use stash for work-in-progress</li>
+                <li>Undo and recover commits</li>
+                <li>Write good commit messages</li>
+                <li>Handle pull requests and code reviews</li>
+            </ul>
+        </div>
+
+        <h2>📚 References & Resources</h2>
+        <ul>
+            <li><strong><a href="https://git-scm.com/book/en/v2" target="_blank">Pro Git Book (Free)</a></strong> - Official comprehensive guide</li>
+            <li><strong><a href="https://git-scm.com/docs" target="_blank">Git Official Documentation</a></strong> - Complete command reference</li>
+            <li><strong><a href="https://www.atlassian.com/git/tutorials" target="_blank">Atlassian Git Tutorials</a></strong> - Clear and practical guides</li>
+            <li><strong><a href="https://github.com/git-tips/tips" target="_blank">Git Tips on GitHub</a></strong> - Useful tips and tricks</li>
+            <li><strong><a href="https://www.youtube.com/results?search_query=git+tutorial" target="_blank">YouTube: Git Tutorials</a></strong> - Various video tutorials</li>
+            <li><strong><a href="https://www.udemy.com/course/git-and-github-bootcamp/" target="_blank">Udemy: Git and GitHub Bootcamp</a></strong> - Comprehensive course</li>
+            <li><strong><a href="https://www.geeksforgeeks.org/git-tutorial/" target="_blank">GeeksforGeeks Git Tutorial</a></strong> - Well-structured guides</li>
+            <li><strong><a href="https://nvie.com/posts/a-successful-git-branching-model/" target="_blank">Git Flow Model</a></strong> - Original Git Flow article</li>
+            <li><strong><a href="https://guides.github.com/" target="_blank">GitHub Guides</a></strong> - GitHub-specific tutorials</li>
+            <li><strong><a href="https://www.gitignore.io/" target="_blank">GitIgnore.io</a></strong> - Generate .gitignore files</li>
+        </ul>
+    </div>
+</body>
+</html>
